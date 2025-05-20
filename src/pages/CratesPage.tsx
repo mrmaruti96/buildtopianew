@@ -5,7 +5,17 @@ import AnimatedBlock from '../components/AnimatedBlock';
 import { ChevronRight, Package } from 'lucide-react';
 
 export default function CratesPage() {
-  const [selectedCrate, setSelectedCrate] = useState(null);
+  type Crate = {
+  id: string;
+  name: string;
+  image: string;
+  description: string;
+  rewards: string[];
+  color: string;
+  price: number;
+};
+
+const [selectedCrate, setSelectedCrate] = useState<Crate | null>(null);
 
   return (
     <div className="page-container">
@@ -138,7 +148,7 @@ export default function CratesPage() {
                 
                 <h3 className="text-lg font-semibold mb-3 glow-text">Possible Rewards:</h3>
                 <ul className="space-y-2 mb-6">
-                  {selectedCrate.rewards.map((reward: any, idx: number) => (
+                  {selectedCrate.rewards.map((reward, idx) => (
                     <li key={idx} className="flex items-start">
                       <svg 
                         className="h-5 w-5 mt-0.5 mr-2 flex-shrink-0" 
