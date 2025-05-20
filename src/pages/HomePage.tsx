@@ -177,7 +177,7 @@ export default function HomePage() {
           <div ref={showcaseRef} className="relative aspect-video rounded-2xl overflow-hidden border-2 border-primary/30">
             {isShowcaseInView && (
               <ReactPlayer
-                url="https://www.youtube.com/embed/videoseries?list=UUC22Sj8H8l_H3P9nQNi14Sg"
+                url="https://www.youtube.com/embed/videoseries?list=aaMPKqA9hLs"
                 width="100%"
                 height="100%"
                 controls={true}
