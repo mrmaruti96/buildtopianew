@@ -85,12 +85,14 @@ export default function ServerStatus() {
               transition={{ repeat: Infinity, duration: 2 }}
             />
           )}
-          <span className={`pixel-text ${status?.online ? 'text-tertiary' : 'text-red-400'}`}>
-            {status?.online ? 'Online' : 'Offline'}
-          </span>
-          {error && (
-            <CircleAlert className="h-4 w-4 text-yellow-500 ml-2 pixel-icon" title={error} />
-          )}
+          <<span className={`pixel-text ${status?.online ? 'text-tertiary' : 'text-red-400'}`}>
+  {status?.online ? 'Online' : 'Offline'}
+</span>
+{error && (
+  <span title={error}>
+    <CircleAlert className="h-4 w-4 text-yellow-500 ml-2 pixel-icon" />
+  </span>
+)}
         </div>
       </div>
 
