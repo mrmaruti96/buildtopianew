@@ -1,15 +1,16 @@
 import { useEffect, useState } from "react";
 import Particles from "@tsparticles/react";
 import { loadAll } from "@tsparticles/all";
-// Fix the import for ISourceOptions
-import type { ISourceOptions } from "@tsparticles/engine";
+import type { ISourceOptions, Engine } from "@tsparticles/engine";
 
 export default function ParticleBackground() {
   const [initDone, setInitDone] = useState(false);
 
   useEffect(() => {
     async function initParticles() {
-      await loadAll(); // Load all tsparticles plugins/features globally
+      // Fix #1: loadAll needs an engine parameter
+      const engine = new Engine();
+      await loadAll(engine);
       setInitDone(true);
     }
     initParticles();
@@ -31,7 +32,11 @@ export default function ParticleBackground() {
           enable: true,
           mode: "repulse",
         },
-        resize: true,
+        // Fix #2: Change resize from boolean to object
+        resize: {
+          enable: true,
+          delay: 0.5
+        },
       },
       modes: {
         repulse: {
