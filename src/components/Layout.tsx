@@ -145,9 +145,9 @@ export default function Layout() {
                 <div className="flex items-center">
                   <div 
                     className="font-minecraft w-full bg-gray-800/70 px-2 py-1 cursor-pointer border-2 border-gray-900 rounded-lg"
-                    onClick={() => handleCopyIP('Panda.xyle.host:6016')}
+                    onClick={() => handleCopyIP('play.buildtopiasmp.fun:6016')}
                   >
-                    Panda.xyle.host:6016
+                    play.buildtopiasmp.fun:6016
                     {copied && <Check className="inline ml-2 text-green-500 h-4 w-4" />}
                   </div>
                 </div>
@@ -160,9 +160,9 @@ export default function Layout() {
                   <div className="text-sm text-gray-300 pixel-text">IP:</div>
                   <div 
                     className="col-span-2 font-minecraft bg-gray-800/70 px-2 py-1 border-2 border-gray-900 cursor-pointer flex items-center justify-between rounded-lg"
-                    onClick={() => handleCopyIP('Panda.xyle.host')}
+                    onClick={() => handleCopyIP('play.buildtopiasmp.fun')}
                   >
-                    <span>Panda.xyle.host</span>
+                    <span>play.buildtopiasmp.fun</span>
                     {copied && <Check className="inline ml-2 text-green-500 h-4 w-4" />}
                   </div>
                   <div className="text-sm text-gray-300 pixel-text">Port:</div>
