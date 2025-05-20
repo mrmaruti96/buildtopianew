@@ -1,15 +1,17 @@
-import { useCallback } from "react";
+import { useEffect, useState } from "react";
 import Particles from "@tsparticles/react";
 import { loadAll } from "@tsparticles/all";
-import type { Container, Engine, ISourceOptions } from "@tsparticles/engine";
+import type { ISourceOptions } from "tsparticles-engine";
 
 export default function ParticleBackground() {
-  const particlesInit = useCallback(async (engine: Engine) => {
-    await loadAll(engine);
-  }, []);
+  const [initDone, setInitDone] = useState(false);
 
-  const particlesLoaded = useCallback(async (container: Container | undefined) => {
-    console.log(container);
+  useEffect(() => {
+    async function initParticles() {
+      await loadAll(); // Load all tsparticles plugins/features globally
+      setInitDone(true);
+    }
+    initParticles();
   }, []);
 
   const options: ISourceOptions = {
@@ -81,13 +83,13 @@ export default function ParticleBackground() {
     detectRetina: true,
   };
 
+  if (!initDone) return null;
+
   return (
     <Particles
       id="tsparticles"
-      init={particlesInit}
-      loaded={particlesLoaded}
-      className="fixed inset-0 -z-10"
       options={options}
+      className="fixed inset-0 -z-10"
     />
   );
 }
