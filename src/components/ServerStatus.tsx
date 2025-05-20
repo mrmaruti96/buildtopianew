@@ -85,7 +85,7 @@ export default function ServerStatus() {
               transition={{ repeat: Infinity, duration: 2 }}
             />
           )}
-          <<span className={`pixel-text ${status?.online ? 'text-tertiary' : 'text-red-400'}`}>
+          <span className={`pixel-text ${status?.online ? 'text-tertiary' : 'text-red-400'}`}>
   {status?.online ? 'Online' : 'Offline'}
 </span>
 {error && (
