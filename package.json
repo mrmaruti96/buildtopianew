@@ -25,7 +25,7 @@
   "tsparticles": "^3.8.1",
   "@tsparticles/engine": "^3.8.1",
   "@tsparticles/react": "^3.8.1",
-  "@tsparticles/full": "^3.8.1"
+  "@tsparticles/all": "^3.8.1"
   },
   "devDependencies": {
     "@getmocha/vite-plugins": "latest",
