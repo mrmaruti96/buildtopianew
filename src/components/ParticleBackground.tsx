@@ -1,13 +1,17 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import Particles from "@tsparticles/react";
+import { loadAll } from "@tsparticles/all";
 import type { ISourceOptions } from "tsparticles-engine";
 
 export default function ParticleBackground() {
   const [initDone, setInitDone] = useState(false);
 
   useEffect(() => {
-    // No plugin loading, just mark init as done
-    setInitDone(true);
+    async function initParticles() {
+      await loadAll(); // Load all tsparticles plugins/features globally
+      setInitDone(true);
+    }
+    initParticles();
   }, []);
 
   const options: ISourceOptions = {
