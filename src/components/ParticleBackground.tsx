@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import Particles from "@tsparticles/react";
 import { loadAll } from "@tsparticles/all";
-import type { ISourceOptions } from "tsparticles-engine";
+// Fix the import for ISourceOptions
+import type { ISourceOptions } from "@tsparticles/engine";
 
 export default function ParticleBackground() {
   const [initDone, setInitDone] = useState(false);
