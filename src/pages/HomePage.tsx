@@ -128,11 +128,11 @@ export default function HomePage() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
                 <div className="fancy-border bg-opacity-50">
                   <h4 className="text-sm text-gray-400 mb-1">Java Edition</h4>
-                  <div className="font-mono select-all cursor-pointer" onClick={() => navigator.clipboard.writeText('Panda.xyle.host:6016')}>Panda.xyle.host:6016</div>
+                  <div className="font-mono select-all cursor-pointer" onClick={() => navigator.clipboard.writeText('play.buildtopiasmp.fun:6016')}>play.buildtopiasmp.fun:6016</div>
                 </div>
                 <div className="fancy-border bg-opacity-50">
                   <h4 className="text-sm text-gray-400 mb-1">Bedrock Edition</h4>
-                  <div className="font-mono">IP: Panda.xyle.host</div>
+                  <div className="font-mono">IP: play.buildtopiasmp.fun</div>
                   <div className="font-mono">Port: 6016</div>
                 </div>
               </div>
