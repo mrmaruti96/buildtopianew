@@ -1,6 +1,4 @@
 import { useState, useCallback } from 'react';
-
-type CopiedValue = string | null;
 type CopyFn = (text: string) => Promise<boolean>;
 
 export function useCopyToClipboard(): [boolean, CopyFn] {
