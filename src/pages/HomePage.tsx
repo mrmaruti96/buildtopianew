@@ -87,7 +87,7 @@ export default function HomePage() {
             <motion.img 
               src="https://mocha-cdn.com/0196e190-5e08-7ba2-99d5-e2009a9a3170/Untitled-1.png" 
               alt="Buildtopia SMP Logo" 
-              className="h-25 max-w-full mx-auto mb-4"
+              className="h-50 max-w-full mx-auto mb-4"
               style={{ 
                 maxHeight: "220px",
                 filter: "drop-shadow(0 0 10px rgba(34, 221, 255, 0.6))"
