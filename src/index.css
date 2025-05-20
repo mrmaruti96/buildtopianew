@@ -1,0 +1,315 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #1e90ff;
+  --primary-rgb: 30, 144, 255;
+  --secondary: #ff7700;
+  --secondary-rgb: 255, 119, 0;
+  --tertiary: #44cc44;
+  --tertiary-rgb: 68, 204, 68;
+  --dark-blue: #0a1428;
+  --light-blue: #1e90ff;
+  --dark-orange: #ff7700;
+  --dark-green: #2a9d2a;
+  --background: #121212;
+  --glass-bg: rgba(10, 10, 10, 0.7);
+  --glass-border: rgba(30, 144, 255, 0.3);
+  --glass-shadow: rgba(30, 144, 255, 0.3);
+  
+  /* Minecraft colors */
+  --mc-dirt: #593d29;
+  --mc-stone: #7e7e7e;
+  --mc-grass: #3a6b2f;
+  --mc-water: #0b4f8c;
+  --mc-wood: #8f5f1a;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px) translateX(0px); }
+  25% { transform: translateY(-5px) translateX(2px); }
+  50% { transform: translateY(0px) translateX(5px); }
+  75% { transform: translateY(5px) translateX(2px); }
+  100% { transform: translateY(0px) translateX(0px); }
+}
+
+@keyframes pulse-glow {
+  0% { box-shadow: 0 0 5px var(--glass-shadow); }
+  50% { box-shadow: 0 0 15px var(--glass-shadow); }
+  100% { box-shadow: 0 0 5px var(--glass-shadow); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -100% 0; }
+  100% { background-position: 200% 0; }
+}
+
+body {
+  margin: 0;
+  font-family: 'Rubik', 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background);
+  color: white;
+  overflow-x: hidden;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoxMUUwRjdGODQzOTExMUUyODNBQzk2RUVBQjREODUxQiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoxMUUwRjdGOTQzOTExMUUyODNBQzk2RUVBQjREODUxQiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjExRTBGN0Y2NDM5MTExRTI4M0FDOTZERUFCNEQ4NTFCIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjExRTBGN0Y3NDM5MTExRTI4M0FDOTZERUFCNEQ4NTFCIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+BCuYQQAAADBJREFUeNpi/P//PwMMsDAwMDAxQADjEFGBRNWMMIeQoZqxWQsviKVMCxMDAwUACDAATxIrCkgGPxgAAAAASUVORK5CYII=");
+}
+
+.minecraft-btn {
+  @apply relative px-4 py-2 border-2 border-primary/30 text-white font-medium transition-all duration-300 
+  hover:border-primary hover:bg-primary/20 hover:scale-105 active:scale-95 overflow-hidden z-10 text-center rounded-xl;
+  background-color: rgba(10, 10, 10, 0.8);
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoxMUUwRjdGODQzOTExMUUyODNBQzk2RUVBQjREODUxQiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoxMUUwRjdGOTQzOTExMUUyODNBQzk2RUVBQjREODUxQiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjExRTBGN0Y2NDM5MTExRTI4M0FDOTZERUFCNEQ4NTFCIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjExRTBGN0Y3NDM5MTExRTI4M0FDOTZERUFCNEQ4NTFCIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+BCuYQQAAADBJREFUeNpi/P//PwMMsDAwMDAxQADjEFGBRNWMMIeQoZqxWQsviKVMCxMDAwUACDAATxIrCkgGPxgAAAAASUVORK5CYII=");
+  image-rendering: auto;
+  box-shadow: 0 0 10px rgba(34, 221, 255, 0.2);
+  backdrop-filter: blur(5px);
+}
+
+.minecraft-btn::before {
+  content: '';
+  @apply absolute top-0 left-0 w-full h-full opacity-10 -z-10;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAFElEQVQIW2P8/1/nPwMDAwMjjAEAQOwF/T76JeUAAAAASUVORK5CYII=');
+  background-repeat: repeat;
+  background-size: 2px;
+}
+
+.minecraft-btn::after {
+  content: '';
+  @apply absolute left-0 bottom-0 w-0 h-[2px] bg-primary transition-all duration-500;
+  box-shadow: 0 0 10px 2px rgba(34, 221, 255, 0.5);
+}
+
+.minecraft-btn:hover::after {
+  @apply w-full;
+}
+
+.page-container {
+  @apply min-h-screen px-4 py-8 md:py-16 md:px-8 max-w-7xl mx-auto;
+}
+
+.glow-text {
+  color: var(--primary);
+  text-shadow: 0 0 10px rgba(30, 144, 255, 0.7);
+}
+
+.orange-glow-text {
+  color: var(--secondary);
+  text-shadow: 0 0 10px rgba(255, 119, 0, 0.7);
+}
+
+.green-glow-text {
+  color: var(--tertiary);
+  text-shadow: 0 0 10px rgba(68, 204, 68, 0.7);
+}
+
+.section-title {
+  @apply text-3xl md:text-4xl font-bold text-center mb-8 glow-text;
+}
+
+.fancy-border {
+  @apply relative p-6 rounded-2xl overflow-hidden transition-all duration-300;
+  background-color: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border: 2px solid var(--glass-border);
+  box-shadow: 0 0 15px var(--glass-shadow);
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
+.minecraft-panel {
+  @apply relative p-4 overflow-hidden transition-all duration-300 rounded-xl;
+  background-color: rgba(74, 74, 74, 0.8);
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoxMUUwRjdGODQzOTExMUUyODNBQzk2RUVBQjREODUxQiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoxMUUwRjdGOTQzOTExMUUyODNBQzk2RUVBQjREODUxQiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjExRTBGN0Y2NDM5MTExRTI4M0FDOTZERUFCNEQ4NTFCIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjExRTBGN0Y3NDM5MTExRTI4M0FDOTZERUFCNEQ4NTFCIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+BCuYQQAAADBJREFUeNpi/P//PwMMsDAwMDAxQADjEFGBRNWMMIeQoZqxWQsviKVMCxMDAwUACDAATxIrCkgGPxgAAAAASUVORK5CYII=");
+  image-rendering: auto;
+  border: 4px solid #272727;
+  position: relative;
+  box-shadow: inset 3px 3px rgba(255, 255, 255, 0.2), 
+              inset -3px -3px rgba(0, 0, 0, 0.2);
+}
+
+.minecraft-panel::before {
+  content: '';
+  @apply absolute inset-0 opacity-30 -z-10;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAFElEQVQIW2P8/1/nPwMDAwMjjAEAQOwF/T76JeUAAAAASUVORK5CYII=');
+  background-repeat: repeat;
+  background-size: 2px;
+}
+
+.panel-header {
+  @apply flex items-center justify-between mb-4 pb-2;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+.panel-content {
+  @apply py-2;
+}
+
+.panel-footer {
+  @apply mt-4 pt-2;
+  border-top: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+.pixel-text {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-shadow: 2px 2px #000;
+}
+
+.font-minecraft {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.mc-progress-bg {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAFElEQVQIW2P8/1/nPwMDAwMjjAEAQOwF/T76JeUAAAAASUVORK5CYII=');
+  background-repeat: repeat;
+  background-size: 2px;
+  border: 2px solid #000;
+  border-radius: 6px;
+}
+
+.mc-progress {
+  box-shadow: inset 1px 1px rgba(255, 255, 255, 0.2);
+}
+
+.mc-loader {
+  width: 24px;
+  height: 24px;
+  border: 4px solid #555;
+  border-bottom-color: var(--primary);
+  border-radius: 0;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  image-rendering: pixelated;
+}
+
+.mc-loader-small {
+  width: 16px;
+  height: 16px;
+  border: 3px solid #555;
+  border-bottom-color: var(--primary);
+  border-radius: 0;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  image-rendering: pixelated;
+}
+
+.mc-loader-tiny {
+  width: 10px;
+  height: 10px;
+  border: 2px solid #555;
+  border-bottom-color: var(--primary);
+  border-radius: 0;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  image-rendering: pixelated;
+}
+
+.minecraft-btn-small {
+  @apply relative px-2 py-1 text-xs transition-all duration-300 rounded-lg;
+  background-color: #555;
+  border: 2px solid #272727;
+  color: #fff;
+  font-family: 'Minecraft', monospace;
+  image-rendering: pixelated;
+  box-shadow: inset 2px 2px rgba(255, 255, 255, 0.2), 
+              inset -2px -2px rgba(0, 0, 0, 0.2);
+}
+
+.minecraft-btn-small:hover {
+  background-color: #666;
+}
+
+.minecraft-btn-small:active {
+  box-shadow: inset -2px -2px rgba(255, 255, 255, 0.2), 
+              inset 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.fancy-border::before {
+  content: '';
+  @apply absolute inset-0 opacity-20 -z-10;
+  background: linear-gradient(45deg, transparent, var(--primary), transparent);
+  background-size: 200% 200%;
+  animation: shimmer 8s linear infinite;
+}
+
+.fancy-border:hover {
+  border-color: rgba(34, 221, 255, 0.5);
+  box-shadow: 0 0 20px rgba(34, 221, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.gradient-text {
+  @apply font-bold;
+  color: var(--primary);
+  text-shadow: 0 0 15px rgba(30, 144, 255, 0.3);
+  letter-spacing: 0.5px;
+}
+
+.floating {
+  animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.bg-stars {
+  @apply fixed top-0 left-0 w-full h-full -z-10;
+  background-image: 
+    radial-gradient(circle at 20% 30%, rgba(34, 221, 255, 0.15) 0%, transparent 20%),
+    radial-gradient(circle at 80% 70%, rgba(255, 102, 34, 0.1) 0%, transparent 20%);
+  background-color: var(--background);
+}
+
+.bg-stars::before {
+  content: '';
+  @apply absolute top-0 left-0 w-full h-full;
+  background-image: 
+    radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
+  background-size: 100px 100px;
+}
+
+/* Subtle grid pattern overlay */
+.grid-pattern {
+  @apply absolute top-0 left-0 w-full h-full opacity-20 -z-10;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.nav-link {
+  @apply relative px-3 py-2 text-white hover:text-primary transition-colors duration-200;
+}
+
+.nav-link::after {
+  content: '';
+  @apply absolute left-0 bottom-0 w-0 h-[2px] bg-primary transition-all duration-300;
+}
+
+.nav-link:hover::after {
+  @apply w-full;
+}
+
+.active-nav-link {
+  @apply text-primary;
+}
+
+.active-nav-link::after {
+  @apply w-full;
+}
