@@ -1,10 +1,16 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Particles from "@tsparticles/react";
-import { loadAll } from "@tsparticles/all";
-import type { ISourceOptions } from "@tsparticles/engine";
+import type { ISourceOptions } from "tsparticles-engine";
 
 export default function ParticleBackground() {
-  const [options] = useState<ISourceOptions>({
+  const [initDone, setInitDone] = useState(false);
+
+  useEffect(() => {
+    // No plugin loading, just mark init as done
+    setInitDone(true);
+  }, []);
+
+  const options: ISourceOptions = {
     background: {
       color: {
         value: "#121212",
@@ -20,9 +26,7 @@ export default function ParticleBackground() {
           enable: true,
           mode: "repulse",
         },
-        resize: {
-          enable: true,
-        },
+        resize: true,
       },
       modes: {
         repulse: {
@@ -71,12 +75,13 @@ export default function ParticleBackground() {
       },
     },
     detectRetina: true,
-  });
+  };
+
+  if (!initDone) return null;
 
   return (
     <Particles
       id="tsparticles"
-      init={loadAll}
       options={options}
       className="fixed inset-0 -z-10"
     />
