@@ -11,12 +11,12 @@ export default function HomePage() {
 
   // Gallery images
   const galleryImages = [
-    'https://images.unsplash.com/photo-1604871000636-074fa5117945?q=80&w=1374&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1623934199716-dc28818a6ec7?q=80&w=1471&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1587573089734-599851b2c3b1?q=80&w=1470&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1668841010137-cc205daf72b1?q=80&w=1374&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1613613428142-a6f8919acbbf?q=80&w=1470&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1626337924454-77952e76f4a4?q=80&w=1470&auto=format&fit=crop',
+    'https://i.ibb.co/3LWYXjH/Screenshot-2025-05-14-170022.png?q=80&w=1374&auto=format&fit=crop',
+    'https://i.ibb.co/4Z6Nttvq/2025-05-10-20-18-12.png?q=80&w=1471&auto=format&fit=crop',
+    'https://i.ibb.co/6SwLbTB/2025-05-10-20-28-50.png?q=80&w=1470&auto=format&fit=crop',
+    'https://i.ibb.co/KcprH40P/2025-04-14-15-00-28.png?q=80&w=1374&auto=format&fit=crop',
+    'https://i.ibb.co/1G5FGTnd/2025-01-19-16-35-28.png?q=80&w=1470&auto=format&fit=crop',
+    'https://i.ibb.co/S757zxSx/Screenshot-2025-05-14-165656.png?q=80&w=1470&auto=format&fit=crop',
   ];
 
   const fadeInUpVariants = {
