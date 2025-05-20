@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import Particles from "@tsparticles/react";
+// Use a different import for engine initialization
+import { tsParticles } from "@tsparticles/engine";
 import { loadAll } from "@tsparticles/all";
-// Fix: Import Engine as a value, not just a type
-import { Engine } from "@tsparticles/engine";
 import type { ISourceOptions } from "@tsparticles/engine";
 
 export default function ParticleBackground() {
@@ -10,9 +10,8 @@ export default function ParticleBackground() {
 
   useEffect(() => {
     async function initParticles() {
-      // Now Engine can be used as a constructor
-      const engine = new Engine();
-      await loadAll(engine);
+      // Use tsParticles global instance instead of creating a new Engine
+      await loadAll(tsParticles);
       setInitDone(true);
     }
     initParticles();
