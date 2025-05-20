@@ -4,7 +4,14 @@ import { teamMembers } from '../data/team';
 import AnimatedBlock from '../components/AnimatedBlock';
 
 export default function CreditsPage() {
-  const [selectedMember, setSelectedMember] = useState(null);
+  type TeamMember = {
+  name: string;
+  role: string;
+  avatar: string;
+  bio: string;
+};
+
+const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null);
 
   return (
     <div className="page-container">
