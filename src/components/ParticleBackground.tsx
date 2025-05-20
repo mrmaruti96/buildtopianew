@@ -1,14 +1,16 @@
 import { useEffect, useState } from "react";
 import Particles from "@tsparticles/react";
 import { loadAll } from "@tsparticles/all";
-import type { ISourceOptions, Engine } from "@tsparticles/engine";
+// Fix: Import Engine as a value, not just a type
+import { Engine } from "@tsparticles/engine";
+import type { ISourceOptions } from "@tsparticles/engine";
 
 export default function ParticleBackground() {
   const [initDone, setInitDone] = useState(false);
 
   useEffect(() => {
     async function initParticles() {
-      // Fix #1: loadAll needs an engine parameter
+      // Now Engine can be used as a constructor
       const engine = new Engine();
       await loadAll(engine);
       setInitDone(true);
@@ -32,7 +34,6 @@ export default function ParticleBackground() {
           enable: true,
           mode: "repulse",
         },
-        // Fix #2: Change resize from boolean to object
         resize: {
           enable: true,
           delay: 0.5
