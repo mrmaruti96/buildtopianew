@@ -138,7 +138,7 @@ export default function CratesPage() {
                 
                 <h3 className="text-lg font-semibold mb-3 glow-text">Possible Rewards:</h3>
                 <ul className="space-y-2 mb-6">
-                  {selectedCrate.rewards.map((reward, idx) => (
+                  {selectedCrate.rewards.map((reward: any, idx: number) => (
                     <li key={idx} className="flex items-start">
                       <svg 
                         className="h-5 w-5 mt-0.5 mr-2 flex-shrink-0" 
