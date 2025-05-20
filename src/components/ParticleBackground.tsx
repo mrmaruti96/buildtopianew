@@ -33,7 +33,10 @@ export default function ParticleBackground() {
               enable: true,
               mode: "repulse",
             },
-            resize: true,
+            resize: {
+  delay: 0.5, // or any valid IResizeEvent property
+  enable: true
+},
           },
           modes: {
             repulse: {
@@ -66,7 +69,7 @@ export default function ParticleBackground() {
           number: {
             density: {
               enable: true,
-              area: 800,
+              value_area: 800,
             },
             value: 80,
           },
