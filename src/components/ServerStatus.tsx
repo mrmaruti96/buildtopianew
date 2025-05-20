@@ -107,7 +107,7 @@ export default function ServerStatus() {
               <div className="grid grid-cols-2 gap-2 mb-2">
                 <div className="text-sm pixel-text">Server IP</div>
                 <div className="text-right font-minecraft text-primary">
-                  Panda.xyle.host:6016
+                  play.buildtopiasmp.fun:6016
                 </div>
               </div>
               <div className="grid grid-cols-2 gap-2 mb-2">
