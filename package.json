@@ -23,6 +23,8 @@
   "react-router-dom": "^7.6.0",
   "three": "0.156.1",
   "tsparticles": "^3.8.1",
+  "@tsparticles/engine": "^3.8.1"
+  "@tsparticles/react": "^3.8.1"
   "@tsparticles/full": "^3.8.1"
   },
   "devDependencies": {
