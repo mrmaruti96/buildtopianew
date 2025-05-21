@@ -47,7 +47,7 @@ export const crates: Crate[] = [
   {
     id: 'common',
     name: 'Vote Crate',
-    price: Vote the server and get the Vote Key,
+    price: 0,
     color: '#55FF55', // Green
     image: 'https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?q=80&w=1470&auto=format&fit=crop',
     rewards: [
