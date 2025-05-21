@@ -38,6 +38,6 @@ export const gameModes: GameMode[] = [
       'Leaderboard system',
       'Special weekend tournaments'
     ],
-    image: 'https://i.ibb.co/ycGrNX6P/Screenshot-2025-05-11-174438-1.png?q=80&w=1470&auto=format&fit=crop'
+    image: 'https://i.ibb.co/KxFMQ0DP/Screenshot-2025-05-14-165656.png?q=80&w=1470&auto=format&fit=crop'
   }
 ];
