@@ -12,7 +12,7 @@ export const gameModes: GameMode[] = [
       'Regular events and challenges',
       'Player-driven towns and nations'
     ],
-    image: 'https://images.unsplash.com/photo-1627856013091-fed6e4e30025?q=80&w=1470&auto=format&fit=crop'
+    image: 'https://i.ibb.co/C3XJ6qnC/Screenshot-2025-05-14-165122.png?q=80&w=1470&auto=format&fit=crop'
   },
   {
     id: 'parkour',
@@ -25,7 +25,7 @@ export const gameModes: GameMode[] = [
       'Personal best tracking',
       'Weekly competitions with prizes'
     ],
-    image: 'https://images.unsplash.com/photo-1640079421264-61f50d3fb120?q=80&w=1470&auto=format&fit=crop'
+    image: 'https://i.ibb.co/0vhDkNm/Screenshot-2025-05-14-165541.png?q=80&w=1470&auto=format&fit=crop'
   },
   {
     id: 'ffa',
@@ -38,6 +38,6 @@ export const gameModes: GameMode[] = [
       'Leaderboard system',
       'Special weekend tournaments'
     ],
-    image: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1470&auto=format&fit=crop'
+    image: 'https://i.ibb.co/ycGrNX6P/Screenshot-2025-05-11-174438-1.png?q=80&w=1470&auto=format&fit=crop'
   }
 ];
