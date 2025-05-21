@@ -8,7 +8,7 @@ export const gameModes: GameMode[] = [
     features: [
       'Economy system with player shops',
       'Land claiming and protection',
-      'Custom crafting recipes',
+      'Epic world generation',
       'Regular events and challenges',
       'Player-driven towns and nations'
     ],
@@ -19,7 +19,7 @@ export const gameModes: GameMode[] = [
     name: 'Parkour',
     description: 'Test your jumping skills across increasingly difficult courses designed to challenge even the most experienced players.',
     features: [
-      'Over 20 unique parkour maps',
+      'Over 5 unique parkour maps',
       'Progressive difficulty levels',
       'Checkpoint system',
       'Personal best tracking',
