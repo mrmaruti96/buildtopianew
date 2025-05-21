@@ -3,7 +3,7 @@ import { Crate } from '../types';
 export const crates: Crate[] = [
   {
     id: 'legendary',
-    name: 'Legendary Crate',
+    name: 'Maruti Crate',
     price: 500,
     color: '#FFD700', // Gold
     image: 'https://images.unsplash.com/photo-1594125674956-61a9b49c8ecc?q=80&w=1374&auto=format&fit=crop',
@@ -18,7 +18,7 @@ export const crates: Crate[] = [
   },
   {
     id: 'epic',
-    name: 'Epic Crate',
+    name: 'Mythic Crate',
     price: 300,
     color: '#AA00FF', // Purple
     image: 'https://images.unsplash.com/photo-1611457194403-d3aca4cf9d11?q=80&w=1374&auto=format&fit=crop',
@@ -32,7 +32,7 @@ export const crates: Crate[] = [
   },
   {
     id: 'rare',
-    name: 'Rare Crate',
+    name: 'Common Crate',
     price: 150,
     color: '#00AAFF', // Blue
     image: 'https://images.unsplash.com/photo-1627843240167-b1f9d70d978a?q=80&w=1470&auto=format&fit=crop',
@@ -46,8 +46,8 @@ export const crates: Crate[] = [
   },
   {
     id: 'common',
-    name: 'Common Crate',
-    price: 50,
+    name: 'Vote Crate',
+    price: Vote the server and get the Vote Key,
     color: '#55FF55', // Green
     image: 'https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?q=80&w=1470&auto=format&fit=crop',
     rewards: [
@@ -56,6 +56,6 @@ export const crates: Crate[] = [
       'Basic Resources (20% chance)',
       'Small XP Boost (5% chance)'
     ],
-    description: 'An affordable crate with basic items to help you get started.'
+    description: 'A free crate with basic items to help you get started.'
   }
 ];
