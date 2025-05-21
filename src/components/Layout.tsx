@@ -47,7 +47,7 @@ export default function Layout() {
           <div className="flex justify-between items-center py-3">
             <Link to="/" className="flex items-center space-x-2">
               <motion.img 
-                src="https://mocha-cdn.com/0196e190-5e08-7ba2-99d5-e2009a9a3170/Untitled-1.png" 
+                src="https://i.ibb.co/RkLNZJnd/buildtopia.gif" 
                 alt="Buildtopia SMP Logo" 
                 className="h-12"
                 initial={{ opacity: 0, y: -20 }}
