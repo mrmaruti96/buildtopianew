@@ -49,7 +49,7 @@ export default function Layout() {
               <motion.img 
                 src="https://i.ibb.co/RkLNZJnd/buildtopia.gif" 
                 alt="Buildtopia SMP Logo" 
-                className="h-18"
+                className="h-11"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
