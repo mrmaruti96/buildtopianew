@@ -54,7 +54,7 @@ export default function HomePage() {
   }}
   whileHover={{ scale: 1.05 }}
 >
-  <span className="block text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]">
+  <span className="block text-white">
     Welcome to
   </span>
   <span 
