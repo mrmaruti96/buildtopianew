@@ -39,18 +39,16 @@ export default function HomePage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div>
             <motion.h1 
-  className="relative text-4xl md:text-6xl font-extrabold mb-4 leading-tight text-center"
+  className="text-4xl md:text-6xl font-extrabold mb-4 leading-tight text-center"
   initial={{ opacity: 0, y: -10 }}
-  animate={{ y: [0, -6, 0] }}
+  animate={{ y: [0, -6, 0], opacity: 1 }}
   transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
 >
-  <span className="block text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]">
+  <span className="block text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]">
     Welcome to
   </span>
   <span 
-    className="bg-gradient-to-r from-cyan-400 via-sky-500 to-blue-600 bg-clip-text text-transparent 
-               drop-shadow-[0_0_6px_rgba(34,221,255,0.7)] 
-               drop-shadow-[0_0_12px_rgba(34,221,255,0.9)]"
+    className="text-white drop-shadow-[0_0_10px_rgba(34,221,255,0.8)] drop-shadow-[0_0_20px_rgba(34,221,255,1)]"
   >
     Buildtopia SMP
   </span>
