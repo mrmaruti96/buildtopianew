@@ -40,15 +40,25 @@ export default function HomePage() {
           <div>
             <motion.h1 
   className="text-4xl md:text-6xl font-extrabold mb-4 leading-tight text-center"
-  initial={{ opacity: 0, y: -10 }}
-  animate={{ y: [0, -6, 0], opacity: 1 }}
-  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+  animate={{ 
+    y: [0, -10, 0],
+    textShadow: [
+      "0 0 10px rgba(34, 221, 255, 0.6)",
+      "0 0 20px rgba(34, 221, 255, 1)",
+      "0 0 10px rgba(34, 221, 255, 0.6)"
+    ]
+  }}
+  transition={{ 
+    y: { repeat: Infinity, duration: 3, ease: "easeInOut" },
+    textShadow: { repeat: Infinity, duration: 3, ease: "easeInOut" }
+  }}
+  whileHover={{ scale: 1.05 }}
 >
   <span className="block text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]">
     Welcome to
   </span>
   <span 
-    className="text-white drop-shadow-[0_0_10px_rgba(34,221,255,0.8)] drop-shadow-[0_0_20px_rgba(34,221,255,1)]"
+    className="block bg-gradient-to-r from-cyan-400 via-sky-500 to-blue-600 bg-clip-text text-transparent"
   >
     Buildtopia SMP
   </span>
