@@ -39,14 +39,18 @@ export default function HomePage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div>
             <motion.h1 
-              className="text-4xl md:text-6xl font-bold mb-4"
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              Welcome to <br />
-              <span className="text-tertiary font-bold">Buildtopia SMP</span>
-            </motion.h1>
+  className="text-4xl md:text-6xl font-extrabold mb-4 leading-tight"
+  initial={{ opacity: 0, y: -20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.5, delay: 0.2 }}
+>
+  <span className="block text-white">Welcome to</span>
+  <span 
+    className="bg-gradient-to-r from-cyan-400 via-sky-500 to-blue-600 bg-clip-text text-transparent drop-shadow-lg"
+  >
+    Buildtopia SMP
+  </span>
+</motion.h1>
             
             <motion.p 
               className="text-lg mb-6 text-gray-300"
