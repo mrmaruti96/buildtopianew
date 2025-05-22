@@ -48,10 +48,9 @@ export default function HomePage() {
     Welcome to
   </span>
   <span 
-    className="relative text-transparent bg-gradient-to-r from-cyan-400 via-sky-500 to-blue-600 bg-clip-text
-               before:content-['Buildtopia SMP']
-               before:absolute before:top-0 before:left-0 before:text-white 
-               before:text-stroke-white before:blur-sm before:opacity-50"
+    className="bg-gradient-to-r from-cyan-400 via-sky-500 to-blue-600 bg-clip-text text-transparent 
+               drop-shadow-[0_0_6px_rgba(34,221,255,0.7)] 
+               drop-shadow-[0_0_12px_rgba(34,221,255,0.9)]"
   >
     Buildtopia SMP
   </span>
