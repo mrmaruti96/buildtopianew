@@ -38,21 +38,23 @@ export default function HomePage() {
       <section className="relative py-12 md:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div>
-            <motion.h1 
-  className="text-4xl md:text-6xl font-extrabold mb-4 leading-tight"
+            <motion.div
   initial={{ opacity: 0, y: -20 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.5, delay: 0.2 }}
+  className="p-4 md:p-6 border-4 rounded-2xl border-cyan-400 shadow-[0_0_25px_rgba(34,221,255,0.5)]"
 >
-  <span className="block text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]">
-    Welcome to
-  </span>
-  <span 
-    className="bg-gradient-to-r from-cyan-400 via-sky-500 to-blue-600 bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(34,221,255,0.8)]"
-  >
-    Buildtopia SMP
-  </span>
-</motion.h1>
+  <h1 className="text-4xl md:text-6xl font-extrabold leading-tight text-center">
+    <span className="block text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]">
+      Welcome to
+    </span>
+    <span 
+      className="bg-gradient-to-r from-cyan-400 via-sky-500 to-blue-600 bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(34,221,255,0.8)]"
+    >
+      Buildtopia SMP
+    </span>
+  </h1>
+</motion.div>
             
             <motion.p 
               className="text-lg mb-6 text-gray-300"
