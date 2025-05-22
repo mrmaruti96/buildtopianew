@@ -40,9 +40,9 @@ export default function HomePage() {
           <div>
             <motion.h1 
   className="relative text-4xl md:text-6xl font-extrabold mb-4 leading-tight text-center"
-  initial={{ opacity: 0, y: -20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.5, delay: 0.2 }}
+  initial={{ opacity: 0, y: -10 }}
+  animate={{ y: [0, -6, 0] }}
+  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
 >
   <span className="block text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]">
     Welcome to
