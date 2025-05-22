@@ -85,23 +85,27 @@ export default function HomePage() {
             transition={{ duration: 0.7, delay: 0.2 }}
           >
             <motion.img 
-              src="https://mocha-cdn.com/0196e190-5e08-7ba2-99d5-e2009a9a3170/Untitled-1.png" 
-              alt="Buildtopia SMP Logo" 
-              className="h-50 max-w-full mx-auto mb-4"
-              style={{ 
-                maxHeight: "220px",
-                filter: "drop-shadow(0 0 10px rgba(34, 221, 255, 0.6))"
-              }}
-              animate={{ 
-                y: [0, -10, 0],
-                filter: ["drop-shadow(0 0 5px rgba(34, 221, 255, 0.4))", "drop-shadow(0 0 15px rgba(34, 221, 255, 0.8))", "drop-shadow(0 0 5px rgba(34, 221, 255, 0.4))"]
-              }}
-              transition={{ 
-                y: { repeat: Infinity, duration: 3, ease: "easeInOut" },
-                filter: { repeat: Infinity, duration: 3, ease: "easeInOut" }
-              }}
-              whileHover={{ scale: 1.05 }}
-            />
+  src="https://mocha-cdn.com/0196e190-5e08-7ba2-99d5-e2009a9a3170/Untitled-1.png" 
+  alt="Buildtopia SMP Logo" 
+  className="h-auto max-w-full mx-auto mb-6"
+  style={{ 
+    maxHeight: "300px", // increased from 220px
+    filter: "drop-shadow(0 0 15px rgba(34, 221, 255, 0.8))" // brighter base glow
+  }}
+  animate={{ 
+    y: [0, -10, 0],
+    filter: [
+      "drop-shadow(0 0 10px rgba(34, 221, 255, 0.6))", 
+      "drop-shadow(0 0 20px rgba(34, 221, 255, 1))", 
+      "drop-shadow(0 0 10px rgba(34, 221, 255, 0.6))"
+    ]
+  }}
+  transition={{ 
+    y: { repeat: Infinity, duration: 3, ease: "easeInOut" },
+    filter: { repeat: Infinity, duration: 3, ease: "easeInOut" }
+  }}
+  whileHover={{ scale: 1.08 }} // slightly more scale on hover
+/>
             <div className="mt-4 max-w-md mx-auto">
               <ServerStatus />
             </div>
