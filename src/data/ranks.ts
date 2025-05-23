@@ -7,11 +7,15 @@ export const ranks: Rank[] = [
     price: 50,
     color: '#AAAAAA',
     perks: [
-      'NOOB tag in chat',
-      '1 home location',
-      'Limited cosmetics access',
-      'Starter kit upon joining',
-      '0.5 additional claim blocks per hour'
+      '💰 ₹20K in-game money',
+      '🏷️ NOOB tag',
+      '🗓️ ₹5K per week',
+      '🏠 2 home sets',
+      '🧱 500 claim blocks',
+      '⚒️ 1 Netherite Scrap',
+      '🗝️ 1 Common Crate Key',
+      '🗳️ 4 Vote Crate Keys',
+      '🥚 2 Villager Spawn Eggs'
     ]
   },
   {
@@ -20,11 +24,15 @@ export const ranks: Rank[] = [
     price: 100,
     color: '#FF55FF',
     perks: [
-      'PRO tag in chat',
-      '2 home locations',
-      'Access to basic cosmetics',
-      'Extended AFK time',
-      'Basic priority on server join'
+      '💰 ₹30K in-game money',
+      '🗓️ ₹10K per week',
+      '🏷️ PRO tag',
+      '🏠 3 home sets',
+      '🧱 500 claim blocks',
+      '🗝️ 2 Common Crate Keys',
+      '🗳️ 4 Vote Crate Keys',
+      '⚒️ 2 Netherite Scraps',
+      '🥚 2 Villager Spawn Eggs'
     ]
   },
   {
@@ -33,11 +41,16 @@ export const ranks: Rank[] = [
     price: 200,
     color: '#55FFFF',
     perks: [
-      'ELITE tag in chat',
-      '3 home locations',
-      'Priority server access',
-      '/hat and /emote commands',
-      '1 additional claim block per hour'
+      '💰 ₹50K in-game money',
+      '🏷️ ELITE tag',
+      '🗓️ ₹25K per week',
+      '🏠 5 home sets',
+      '🧱 1000 claim blocks',
+      '⚒️ 4 Netherite Scraps',
+      '🗝️ 4 Common Crate Keys',
+      '🎭 3 Custom Heads',
+      '✨ 2 Myth Crate Keys',
+      '🥚 2 Villager Spawn Eggs'
     ]
   },
   {
@@ -46,12 +59,17 @@ export const ranks: Rank[] = [
     price: 250,
     color: '#FFAA00',
     perks: [
-      'Unique OG tag in chat',
-      'Access to /fly in hub',
-      '4 home locations',
-      'Colored text in chat',
-      'Access to exclusive OG cosmetics',
-      '1.5 additional claim blocks per hour'
+      '💰 ₹1 Lakh in-game money',
+      '🗓️ ₹50K per week',
+      '🏷️ OG tag',
+      '🏠 6 home sets',
+      '🧱 2000 claim blocks',
+      '⚒️ 2 Netherite Ingots',
+      '🎭 5 Custom Heads',
+      '🗝️ 5 Common Crate Keys',
+      '✨ 4 Myth Crate Keys',
+      '📦 /enderchest command',
+      '🥚 2 Villager Spawn Eggs'
     ]
   },
   {
@@ -60,11 +78,20 @@ export const ranks: Rank[] = [
     price: 300,
     color: '#55FF55',
     perks: [
-      'Colored name in chat',
-      'Access to /fly in hub',
-      '5 home locations',
-      'Ability to use colored text in chat',
-      '2 additional claim blocks per hour'
+      '💰 ₹3 Lakh in-game money',
+      '🗓️ ₹1 Lakh per week',
+      '🏷️ VIP tag',
+      '🧱 3000 claim blocks',
+      '🏠 8 home sets',
+      '⚒️ 4 Netherite Ingots',
+      '🎭 10 Custom Heads',
+      '🗝️ 10 Common Crate Keys',
+      '✨ 6 Myth Crate Keys',
+      '🔮 2 Maruti Crate Keys',
+      '📦 /enderchest command',
+      '🛠️ /anvil command',
+      '⚙️ XP farm chest access',
+      '🥚 2 Villager Spawn Eggs'
     ]
   },
   {
@@ -73,12 +100,21 @@ export const ranks: Rank[] = [
     price: 400,
     color: '#00FF00',
     perks: [
-      'Everything in VIP rank',
-      'Custom join/leave messages',
-      '6 home locations',
-      'Access to /nick command',
-      '/heal command (10 min cooldown)',
-      '3 additional claim blocks per hour'
+      '💰 ₹5 Lakh in-game money',
+      '🗓️ ₹3 Lakh per week',
+      '🏷️ VIP+ tag',
+      '🏠 10 home sets',
+      '🧱 5000 claim blocks',
+      '⚒️ 8 Netherite Ingots',
+      '🎭 50 Custom Heads',
+      '🗝️ 10 Common Crate Keys',
+      '✨ 10 Myth Crate Keys',
+      '🔮 4 Maruti Crate Keys',
+      '📦 /enderchest command',
+      '🛠️ /anvil command',
+      '🕊️ /fly command',
+      '⚙️ XP farm chest access',
+      '🥚 2 Villager Spawn Eggs'
     ]
   }
 ];
