@@ -4,33 +4,34 @@ export default function HomePage() { const showcaseRef = useRef(null); const isS
 
 const galleryImages = [ 'https://i.ibb.co/3LWYXjH/Screenshot-2025-05-14-170022.png?q=80&w=1374&auto=format&fit=crop', 'https://i.ibb.co/4Z6Nttvq/2025-05-10-20-18-12.png?q=80&w=1471&auto=format&fit=crop', 'https://i.ibb.co/6SwLbTB/2025-05-10-20-28-50.png?q=80&w=1470&auto=format&fit=crop', 'https://i.ibb.co/KcprH40P/2025-04-14-15-00-28.png?q=80&w=1374&auto=format&fit=crop', 'https://i.ibb.co/1G5FGTnd/2025-01-19-16-35-28.png?q=80&w=1470&auto=format&fit=crop', 'https://i.ibb.co/S757zxSx/Screenshot-2025-05-14-165656.png?q=80&w=1470&auto=format&fit=crop', ];
 
-const fadeInUpVariants = { hidden: { opacity: 0, y: 30 }, visible: (i) => ({ opacity: 1, y: 0, transition: { delay: i * 0.1, duration: 0.7, ease: [0.1, 0.4, 0.2, 1], } }) };
+const fadeInUpVariants = { hidden: { opacity: 0, y: 30 }, visible: (i) => ({ opacity: 1, y: 0, transition: { delay: i * 0.1, duration: 0.7, ease: [0.1, 0.4, 0.2, 1], }, }), };
 
-return ( <div className="page-container px-4 md:px-8"> {/* Hero */} <section className="py-12 md:py-20"> <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center"> <div> <motion.h1 className="text-center text-white text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-6" animate={{ y: [0, -10, 0], textShadow: [ "0 0 10px rgba(34, 221, 255, 0.6)", "0 0 20px rgba(34, 221, 255, 1)", "0 0 10px rgba(34, 221, 255, 0.6)" ] }} transition={{ y: { repeat: Infinity, duration: 3, ease: "easeInOut" }, textShadow: { repeat: Infinity, duration: 3, ease: "easeInOut" } }} whileHover={{ scale: 1.05 }} > <span className="block">Welcome to</span> <span className="block bg-gradient-to-r from-cyan-400 via-sky-500 to-blue-600 bg-clip-text text-transparent"> Buildtopia SMP </span> </motion.h1>
+return ( <div className="page-container px-4 sm:px-6 lg:px-8"> {/* Hero section */} <section className="relative py-12 md:py-20"> <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center"> <div> <motion.h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold mb-4 leading-tight text-center" animate={{ y: [0, -10, 0], textShadow: [ '0 0 10px rgba(34, 221, 255, 0.6)', '0 0 20px rgba(34, 221, 255, 1)', '0 0 10px rgba(34, 221, 255, 0.6)', ], }} transition={{ y: { repeat: Infinity, duration: 3, ease: 'easeInOut' }, textShadow: { repeat: Infinity, duration: 3, ease: 'easeInOut' }, }} whileHover={{ scale: 1.05 }} > <span className="block text-white">Welcome to</span> <span className="block bg-gradient-to-r from-cyan-400 via-sky-500 to-blue-600 bg-clip-text text-transparent"> Buildtopia SMP </span> </motion.h1>
 
 <motion.p
-          className="text-lg text-gray-300 text-center md:text-left mb-6"
+          className="text-base sm:text-lg mb-6 text-gray-300 text-center"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          Join our thriving Minecraft community with exciting gameplay, events, and friends!
+          Join our thriving Minecraft community with unique gameplay features,
+          regular events, and a friendly community waiting to welcome you!
         </motion.p>
 
         <motion.div
-          className="flex justify-center md:justify-start flex-wrap gap-4"
+          className="flex flex-col sm:flex-row justify-center gap-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
         >
-          <Link to="/gamemodes" className="minecraft-btn">
+          <Link to="/gamemodes" className="minecraft-btn w-full sm:w-auto">
             Explore Gamemodes
           </Link>
           <a
             href="https://discord.gg/gAeFJDKsnb"
             target="_blank"
             rel="noopener noreferrer"
-            className="minecraft-btn"
+            className="minecraft-btn w-full sm:w-auto"
           >
             Join Our Discord
           </a>
@@ -38,7 +39,7 @@ return ( <div className="page-container px-4 md:px-8"> {/* Hero */} <section cla
       </div>
 
       <motion.div
-        className="text-center"
+        className="text-center w-full"
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.7, delay: 0.2 }}
@@ -46,18 +47,22 @@ return ( <div className="page-container px-4 md:px-8"> {/* Hero */} <section cla
         <motion.img
           src="https://mocha-cdn.com/0196e190-5e08-7ba2-99d5-e2009a9a3170/Untitled-1.png"
           alt="Buildtopia SMP Logo"
-          className="mx-auto mb-6 max-h-72 drop-shadow-lg"
+          className="h-auto max-w-full mx-auto mb-6"
+          style={{
+            maxHeight: '300px',
+            filter: 'drop-shadow(0 0 15px rgba(34, 221, 255, 0.8))',
+          }}
           animate={{
             y: [0, -10, 0],
             filter: [
-              "drop-shadow(0 0 10px rgba(34, 221, 255, 0.6))",
-              "drop-shadow(0 0 20px rgba(34, 221, 255, 1))",
-              "drop-shadow(0 0 10px rgba(34, 221, 255, 0.6))"
-            ]
+              'drop-shadow(0 0 10px rgba(34, 221, 255, 0.6))',
+              'drop-shadow(0 0 20px rgba(34, 221, 255, 1))',
+              'drop-shadow(0 0 10px rgba(34, 221, 255, 0.6))',
+            ],
           }}
           transition={{
-            y: { repeat: Infinity, duration: 3, ease: "easeInOut" },
-            filter: { repeat: Infinity, duration: 3, ease: "easeInOut" }
+            y: { repeat: Infinity, duration: 3, ease: 'easeInOut' },
+            filter: { repeat: Infinity, duration: 3, ease: 'easeInOut' },
           }}
           whileHover={{ scale: 1.08 }}
         />
@@ -68,25 +73,31 @@ return ( <div className="page-container px-4 md:px-8"> {/* Hero */} <section cla
     </div>
   </section>
 
-  {/* Info */}
+  {/* Server information */}
   <AnimatedBlock delay={0.3}>
     <section className="mb-16">
       <h2 className="section-title">Server Information</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className="md:col-span-2 fancy-border p-6">
-          <h3 className="text-xl font-semibold gradient-text mb-4">How to Join</h3>
-          <ol className="list-decimal pl-5 text-gray-300 space-y-2">
-            <li>Launch Minecraft Java or Bedrock Edition</li>
-            <li>Multiplayer → Add Server</li>
-            <li>Use address: <span className="font-mono">play.buildtopiasmp.fun</span></li>
-            <li>Join and play!</li>
+        <div className="md:col-span-2 fancy-border">
+          <h3 className="text-xl font-bold mb-4 gradient-text">How to Join</h3>
+          <p className="mb-4">Joining our server is easy! Just follow these steps to get started:</p>
+          <ol className="list-decimal pl-5 space-y-2 mb-4">
+            <li>Launch Minecraft Java Edition or Bedrock Edition</li>
+            <li>Go to Multiplayer → Add Server</li>
+            <li>Enter our server address below</li>
+            <li>Connect and start playing!</li>
           </ol>
-          <div className="grid sm:grid-cols-2 gap-4 mt-6">
-            <div className="fancy-border p-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+            <div className="fancy-border bg-opacity-50">
               <h4 className="text-sm text-gray-400 mb-1">Java Edition</h4>
-              <div className="font-mono select-all cursor-pointer" onClick={() => navigator.clipboard.writeText('play.buildtopiasmp.fun')}>play.buildtopiasmp.fun</div>
+              <div
+                className="font-mono select-all cursor-pointer"
+                onClick={() => navigator.clipboard.writeText('play.buildtopiasmp.fun')}
+              >
+                play.buildtopiasmp.fun
+              </div>
             </div>
-            <div className="fancy-border p-3">
+            <div className="fancy-border bg-opacity-50">
               <h4 className="text-sm text-gray-400 mb-1">Bedrock Edition</h4>
               <div className="font-mono">IP: play.buildtopiasmp.fun</div>
               <div className="font-mono">Port: 6004</div>
@@ -117,7 +128,7 @@ return ( <div className="page-container px-4 md:px-8"> {/* Hero */} <section cla
           >
             <img
               src={image}
-              alt={`Showcase ${index + 1}`}
+              alt={`Buildtopia SMP Showcase ${index + 1}`}
               className="h-full w-full object-cover transition-transform duration-500 hover:scale-110"
             />
           </motion.div>
@@ -126,17 +137,18 @@ return ( <div className="page-container px-4 md:px-8"> {/* Hero */} <section cla
     </section>
   </AnimatedBlock>
 
-  {/* Videos */}
+  {/* YouTube Embed */}
   <AnimatedBlock delay={0.5}>
     <section className="mb-16">
       <h2 className="section-title">Latest Videos</h2>
-      <div ref={showcaseRef} className="relative aspect-video rounded-2xl overflow-hidden border-2 border-primary/30">
+      <div ref={showcaseRef} className="relative pb-[56.25%] h-0 overflow-hidden rounded-2xl border-2 border-primary/30">
         {isShowcaseInView && (
           <ReactPlayer
             url="https://www.youtube.com/embed/aaMPKqA9hLs?si=i3RVA6znAOBcVMJH"
             width="100%"
             height="100%"
             controls={true}
+            style={{ position: 'absolute', top: 0, left: 0 }}
           />
         )}
       </div>
@@ -148,7 +160,20 @@ return ( <div className="page-container px-4 md:px-8"> {/* Hero */} <section cla
           className="inline-flex items-center text-primary hover:text-primary/80 transition-colors"
         >
           Subscribe to our YouTube Channel
-          <svg xmlns="http://www.w3.org/2000/svg" className="ml-1" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="ml-1"
+          >
+            <path d="m9 18 6-6-6-6" />
+          </svg>
         </a>
       </div>
     </section>
