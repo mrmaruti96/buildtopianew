@@ -4,42 +4,18 @@ export default function HomePage() { const showcaseRef = useRef(null); const isS
 
 const galleryImages = [ 'https://i.ibb.co/3LWYXjH/Screenshot-2025-05-14-170022.png?q=80&w=1374&auto=format&fit=crop', 'https://i.ibb.co/4Z6Nttvq/2025-05-10-20-18-12.png?q=80&w=1471&auto=format&fit=crop', 'https://i.ibb.co/6SwLbTB/2025-05-10-20-28-50.png?q=80&w=1470&auto=format&fit=crop', 'https://i.ibb.co/KcprH40P/2025-04-14-15-00-28.png?q=80&w=1374&auto=format&fit=crop', 'https://i.ibb.co/1G5FGTnd/2025-01-19-16-35-28.png?q=80&w=1470&auto=format&fit=crop', 'https://i.ibb.co/S757zxSx/Screenshot-2025-05-14-165656.png?q=80&w=1470&auto=format&fit=crop', ];
 
-const fadeInUpVariants = { hidden: { opacity: 0, y: 30 }, visible: (i) => ({ opacity: 1, y: 0, transition: { delay: i * 0.1, duration: 0.7, ease: [0.1, 0.4, 0.2, 1], }, }), };
+const fadeInUpVariants = { hidden: { opacity: 0, y: 30 }, visible: (i: number) => ({ opacity: 1, y: 0, transition: { delay: i * 0.1, duration: 0.7, ease: [0.1, 0.4, 0.2, 1], }, }), };
 
-return ( <div className="page-container px-4 sm:px-6 lg:px-8"> {/* Hero section */} <section className="relative py-12 md:py-20"> <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center"> <div> <motion.h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold mb-4 leading-tight text-center" animate={{ y: [0, -10, 0], textShadow: [ '0 0 10px rgba(34, 221, 255, 0.6)', '0 0 20px rgba(34, 221, 255, 1)', '0 0 10px rgba(34, 221, 255, 0.6)', ], }} transition={{ y: { repeat: Infinity, duration: 3, ease: 'easeInOut' }, textShadow: { repeat: Infinity, duration: 3, ease: 'easeInOut' }, }} whileHover={{ scale: 1.05 }} > <span className="block text-white">Welcome to</span> <span className="block bg-gradient-to-r from-cyan-400 via-sky-500 to-blue-600 bg-clip-text text-transparent"> Buildtopia SMP </span> </motion.h1>
+return ( <div className="page-container"> {/* Hero Section /} <section className="relative py-12 md:py-20"> <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center"> {/ Hero Text */} <div> <motion.h1 className="text-4xl md:text-6xl font-extrabold leading-tight text-center mb-6" animate={{ y: [0, -10, 0], textShadow: [ '0 0 10px rgba(34, 221, 255, 0.6)', '0 0 20px rgba(34, 221, 255, 1)', '0 0 10px rgba(34, 221, 255, 0.6)', ], }} transition={{ y: { repeat: Infinity, duration: 3, ease: 'easeInOut' }, textShadow: { repeat: Infinity, duration: 3, ease: 'easeInOut' }, }} whileHover={{ scale: 1.05 }} > <span className="block text-white">Welcome to</span> <span className="block bg-gradient-to-r from-cyan-400 via-sky-500 to-blue-600 bg-clip-text text-transparent"> Buildtopia SMP </span> </motion.h1> <motion.p className="text-lg text-gray-300 mb-6 text-center" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.4 }} > Join our thriving Minecraft community with unique gameplay features, regular events, and a friendly community waiting to welcome you! </motion.p> <motion.div className="flex justify-center flex-wrap gap-4" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.6 }} > <Link to="/gamemodes" className="minecraft-btn"> Explore Gamemodes </Link> <a
+href="https://discord.gg/gAeFJDKsnb"
+target="_blank"
+rel="noopener noreferrer"
+className="minecraft-btn"
+> Join Our Discord </a> </motion.div> </div>
 
-<motion.p
-          className="text-base sm:text-lg mb-6 text-gray-300 text-center"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-        >
-          Join our thriving Minecraft community with unique gameplay features,
-          regular events, and a friendly community waiting to welcome you!
-        </motion.p>
-
-        <motion.div
-          className="flex flex-col sm:flex-row justify-center gap-4"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.6 }}
-        >
-          <Link to="/gamemodes" className="minecraft-btn w-full sm:w-auto">
-            Explore Gamemodes
-          </Link>
-          <a
-            href="https://discord.gg/gAeFJDKsnb"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="minecraft-btn w-full sm:w-auto"
-          >
-            Join Our Discord
-          </a>
-        </motion.div>
-      </div>
-
+{/* Hero Image + Status */}
       <motion.div
-        className="text-center w-full"
+        className="text-center"
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.7, delay: 0.2 }}
@@ -47,7 +23,7 @@ return ( <div className="page-container px-4 sm:px-6 lg:px-8"> {/* Hero section 
         <motion.img
           src="https://mocha-cdn.com/0196e190-5e08-7ba2-99d5-e2009a9a3170/Untitled-1.png"
           alt="Buildtopia SMP Logo"
-          className="h-auto max-w-full mx-auto mb-6"
+          className="h-auto max-w-xs mx-auto mb-6"
           style={{
             maxHeight: '300px',
             filter: 'drop-shadow(0 0 15px rgba(34, 221, 255, 0.8))',
@@ -73,7 +49,7 @@ return ( <div className="page-container px-4 sm:px-6 lg:px-8"> {/* Hero section 
     </div>
   </section>
 
-  {/* Server information */}
+  {/* Server Information */}
   <AnimatedBlock delay={0.3}>
     <section className="mb-16">
       <h2 className="section-title">Server Information</h2>
@@ -115,7 +91,7 @@ return ( <div className="page-container px-4 sm:px-6 lg:px-8"> {/* Hero section 
   <AnimatedBlock delay={0.4}>
     <section className="mb-16">
       <h2 className="section-title">Gallery</h2>
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
         {galleryImages.map((image, index) => (
           <motion.div
             key={index}
@@ -141,14 +117,16 @@ return ( <div className="page-container px-4 sm:px-6 lg:px-8"> {/* Hero section 
   <AnimatedBlock delay={0.5}>
     <section className="mb-16">
       <h2 className="section-title">Latest Videos</h2>
-      <div ref={showcaseRef} className="relative pb-[56.25%] h-0 overflow-hidden rounded-2xl border-2 border-primary/30">
+      <div
+        ref={showcaseRef}
+        className="relative aspect-video rounded-2xl overflow-hidden border-2 border-primary/30"
+      >
         {isShowcaseInView && (
           <ReactPlayer
             url="https://www.youtube.com/embed/aaMPKqA9hLs?si=i3RVA6znAOBcVMJH"
             width="100%"
             height="100%"
             controls={true}
-            style={{ position: 'absolute', top: 0, left: 0 }}
           />
         )}
       </div>
