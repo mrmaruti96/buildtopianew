@@ -445,4 +445,52 @@ export default function HomePage() {
                 url="https://www.youtube.com/embed/aaMPKqA9hLs?si=i3RVA6znAOBcVMJH"
                 width="100%"
                 height="100%"
-                controls={tr
+                controls={true}
+              />
+            )}
+          </motion.div>
+          <motion.div 
+            className="text-center mt-8"
+            whileInView={{ y: [20, 0], opacity: [0, 1] }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <motion.a 
+              href="https://www.youtube.com/@mrMaruti9" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 text-lg text-primary hover:text-primary/80 transition-all duration-300 group bg-gradient-to-r from-gray-900/50 to-gray-800/50 backdrop-blur-sm px-6 py-3 rounded-full border border-primary/30 hover:border-primary/60 hover:shadow-lg hover:shadow-primary/20"
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <motion.svg 
+                className="w-6 h-6 text-red-500" 
+                fill="currentColor" 
+                viewBox="0 0 24 24"
+                animate={{ scale: [1, 1.1, 1] }}
+                transition={{ repeat: Infinity, duration: 2 }}
+              >
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              </motion.svg>
+              Subscribe to our YouTube Channel
+              <motion.svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                width="20" 
+                height="20" 
+                viewBox="0 0 24 24" 
+                fill="none" 
+                stroke="currentColor" 
+                strokeWidth="2" 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                className="group-hover:translate-x-1 transition-transform"
+              >
+                <path d="m9 18 6-6-6-6"/>
+              </motion.svg>
+            </motion.a>
+          </motion.div>
+        </section>
+      </AnimatedBlock>
+    </div>
+  );
+}
