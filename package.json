@@ -23,7 +23,8 @@
   "three": "0.156.1",
   "@tsparticles/all": "^3.0.0",
   "@tsparticles/react": "^3.0.0",
-  "@tsparticles/engine": "^3.0.0"
+  "@tsparticles/engine": "^3.0.0",
+  "@vercel/speed-insights": "1.2.0"
   
   },
   "devDependencies": {
