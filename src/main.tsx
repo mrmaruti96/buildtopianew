@@ -10,24 +10,22 @@ import CreditsPage from './pages/CreditsPage'
 import CratesPage from './pages/CratesPage'
 import './index.css'
 
-if (import.meta.env.PROD) {
-  import('@vercel/speed-insights').then((mod) => mod.default.inject())
-}
-
 createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<HomePage />} />
-          <Route path="gamemodes" element={<GamemodesPage />} />
-          <Route path="ranks" element={<RanksPage />} />
-          <Route path="social" element={<SocialPage />} />
-          <Route path="crates" element={<CratesPage />} />
-          <Route path="credits" element={<CreditsPage />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
-  </StrictMode>,
+<StrictMode>
+<BrowserRouter>
+<Routes>
+<Route path="/" element={<Layout />}>
+<Route index element={<HomePage />} />
+<Route path="gamemodes" element={<GamemodesPage />} />
+<Route path="ranks" element={<RanksPage />} />
+<Route path="social" element={<SocialPage />} />
+<Route path="crates" element={<CratesPage />} />
+<Route path="credits" element={<CreditsPage />} />
+<Route path="*" element={<Navigate to="/" replace />} />
+</Route>
+</Routes>
+</BrowserRouter>
+</StrictMode>,
 )
+
+
