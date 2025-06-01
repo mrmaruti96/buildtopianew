@@ -10,9 +10,9 @@ export const teamMembers: TeamMember[] = [
   },
   {
     id: 'dev1',
-    name: 'BlockCoder',
+    name: 'ParthOP69',
     role: 'Developer',
-    bio: 'Talented plugin developer who creates custom features for the server. Always working on new ideas to enhance the gameplay experience.',
+    bio: 'Talented plugin developer who creates custom features for the server. Always working on new ideas to enhance the gameplay experience. He has created TitaniumSecurity plugin, Download Here --> https://titanium.skyrain.cloud',
     avatar: 'https://mc-heads.net/avatar/ItzAkhilesh/50'
   }
 ];
