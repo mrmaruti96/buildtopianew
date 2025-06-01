@@ -9,13 +9,6 @@ export const teamMembers: TeamMember[] = [
     avatar: 'https://mc-heads.net/avatar/mrMaruti9/100'
   },
   {
-    id: 'admin1',
-    name: 'CraftyAdmin',
-    role: 'Admin',
-    bio: 'Experienced server administrator who ensures everything runs smoothly. Known for fair moderation and helpful guidance to new players.',
-    avatar: 'https://mc-heads.net/avatar/CraftyAdmin/100'
-  },
-  {
     id: 'dev1',
     name: 'BlockCoder',
     role: 'Developer',
