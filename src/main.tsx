@@ -10,6 +10,11 @@ import CreditsPage from './pages/CreditsPage'
 import CratesPage from './pages/CratesPage'
 import './index.css'
 
+// Inject Vercel Speed Insights (only in production)
+if (import.meta.env.PROD) {
+  import('@vercel/speed-insights').then(({ inject }) => inject())
+}
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
