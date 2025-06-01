@@ -10,7 +10,7 @@ export const teamMembers: TeamMember[] = [
   },
   {
     id: 'sponsor',
-    name: 'mrMaruti's Mom',
+    name: 'mrMaruti Mom',
     role: 'Special Sponsor',
     bio: 'The genius behind Minecraft innovations and the creator of the powerful Titanium Security plugin. A true mastermind shaping the tech behind BUILDTOPIA.Link: https://titanium.skyrain.cloud',
     avatar: 'https://mc-heads.net/avatar/ItzAkhilesh/50'
