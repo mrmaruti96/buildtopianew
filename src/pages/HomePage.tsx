@@ -130,39 +130,60 @@ export default function HomePage() {
       </section>
 
       {/* Server information */}
-      <AnimatedBlock delay={0.3}>
-        <section className="mb-16">
-          <h2 className="section-title">Server Information</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="md:col-span-2 fancy-border">
-              <h3 className="text-xl font-bold mb-4 gradient-text">How to Join</h3>
-              <p className="mb-4">
-                Joining our server is easy! Just follow these steps to get started:
-              </p>
-              <ol className="list-decimal pl-5 space-y-2 mb-4">
-                <li>Launch Minecraft Java Edition or Bedrock Edition</li>
-                <li>Go to Multiplayer → Add Server</li>
-                <li>Enter our server address below</li>
-                <li>Connect and start playing!</li>
-              </ol>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
-                <div className="fancy-border bg-opacity-50">
-                  <h4 className="text-sm text-gray-400 mb-1">Java Edition</h4>
-                  <div className="font-mono select-all cursor-pointer" onClick={() => navigator.clipboard.writeText('mc.buildtopiasmp.fun')}>mc.buildtopiasmp.fun</div>
-                </div>
-                <div className="fancy-border bg-opacity-50">
-                  <h4 className="text-sm text-gray-400 mb-1">Bedrock Edition</h4>
-                  <div className="font-mono">IP: mcpe.buildtopiasmp.fun</div>
-                  <div className="font-mono">Port: 25569</div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <ServerStatus />
+<AnimatedBlock delay={0.3}>
+  <section className="mb-16">
+    <h2 className="section-title">Server Information</h2>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      
+      {/* How to Join */}
+      <div className="md:col-span-2 fancy-border p-6">
+        <h3 className="text-xl font-bold mb-4 gradient-text">How to Join</h3>
+        <p className="mb-4">
+          Getting started is easy! Follow these steps to join our server:
+        </p>
+        <ol className="list-decimal pl-5 space-y-2 mb-6">
+          <li>Launch <strong>Minecraft Java Edition</strong> or <strong>Bedrock Edition</strong></li>
+          <li>Navigate to <strong>Multiplayer → Add Server</strong></li>
+          <li>Enter the server address provided below</li>
+          <li>Connect and start your adventure!</li>
+        </ol>
+
+        {/* IP Addresses */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {/* Java Edition */}
+          <div className="fancy-border p-4 bg-opacity-50">
+            <h4 className="text-sm text-gray-400 mb-1">Java Edition</h4>
+            <div 
+              className="font-mono text-lg text-white bg-black/70 px-3 py-1 rounded select-all cursor-pointer hover:bg-black/90 transition"
+              onClick={() => navigator.clipboard.writeText('mc.buildtopiasmp.fun')}
+              title="Click to copy"
+            >
+              mc.buildtopiasmp.fun
             </div>
           </div>
-        </section>
-      </AnimatedBlock>
+
+          {/* Bedrock Edition */}
+          <div className="fancy-border p-4 bg-opacity-50">
+            <h4 className="text-sm text-gray-400 mb-1">Bedrock Edition</h4>
+            <div className="font-mono text-white">
+              <div className="bg-black/70 px-3 py-1 rounded mb-1">
+                IP: <span className="text-green-400">mcpe.buildtopiasmp.fun</span>
+              </div>
+              <div className="bg-black/70 px-3 py-1 rounded">
+                Port: <span className="text-yellow-400">25569</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Server Status */}
+      <div>
+        <ServerStatus />
+      </div>
+    </div>
+  </section>
+</AnimatedBlock>
 
       {/* Gallery */}
       <AnimatedBlock delay={0.4}>
