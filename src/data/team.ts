@@ -19,7 +19,7 @@ export const teamMembers: TeamMember[] = [
   id: 'dev1',
   name: 'ParthOP69',
   role: 'Developer',
-  bio: 'The genius behind Minecraft innovations and the creator of the powerful Titanium Security plugin. A true mastermind shaping the tech behind BUILDTOPIA. <a href="https://titanium.skyrain.cloud" target="_blank" rel="noopener noreferrer" class="text-blue-400 underline">Link</a>',
+  bio: 'The genius behind Minecraft innovations and the creator of the powerful Titanium Security plugin. A true mastermind shaping the tech behind BUILDTOPIA. https://titanium.skyrain.cloud',
   avatar: 'https://mc-heads.net/avatar/ItzAkhilesh/50'
 }
 ];
