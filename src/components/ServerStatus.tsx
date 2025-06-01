@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { ServerStatus as ServerStatusType } from '../types';
 import { CircleAlert } from 'lucide-react';
 
@@ -24,9 +24,9 @@ export default function ServerStatus() {
         online: true,
         players: {
           online: data.players?.online ?? 0,
-          max: data.players?.max ?? 100
+          max: data.players?.max ?? 100,
         },
-        version: data.version ?? 'Unknown'
+        version: data.version ?? 'Unknown',
       };
 
       setStatus(serverStatus);
@@ -38,7 +38,7 @@ export default function ServerStatus() {
       setStatus({
         online: true,
         players: { online: 0, max: 100 },
-        version: 'Unknown'
+        version: 'Unknown',
       });
     } finally {
       setLastUpdated(new Date());
@@ -54,7 +54,7 @@ export default function ServerStatus() {
 
   if (loading && !status) {
     return (
-      <div className="minecraft-panel p-4 text-center rounded-2xl border border-gray-700 bg-black/40">
+      <div className="minecraft-panel p-4 text-center rounded-2xl">
         <div className="flex flex-col items-center justify-center">
           <div className="mc-loader"></div>
           <p className="pixel-text mt-2">Checking server status...</p>
@@ -64,19 +64,19 @@ export default function ServerStatus() {
   }
 
   return (
-    <motion.div 
-      className="minecraft-panel bg-black/40 rounded-2xl p-4 border border-gray-700 shadow-xl"
+    <motion.div
+      className="minecraft-panel rounded-2xl p-4"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="flex justify-between items-center mb-4">
-        <h3 className="pixel-text text-xl font-bold">Server Status</h3>
+      <div className="panel-header mb-2">
+        <h3 className="pixel-text text-lg font-bold">Server Status</h3>
         <div className="flex items-center">
           {loading ? (
             <div className="mc-loader-small mr-2"></div>
           ) : (
-            <motion.div 
+            <motion.div
               className={`w-3 h-3 rounded-full mr-2 ${status?.online ? 'bg-tertiary' : 'bg-red-500'}`}
               animate={{ scale: [1, 1.2, 1], opacity: [0.8, 1, 0.8] }}
               transition={{ repeat: Infinity, duration: 2 }}
@@ -93,54 +93,79 @@ export default function ServerStatus() {
         </div>
       </div>
 
-      <div className="space-y-3">
-        <div className="flex justify-between items-center">
-          <span className="text-sm pixel-text">Server IP</span>
-          <span className="font-minecraft text-white text-right break-all">
-            mc.buildtopiasmp.fun
-          </span>
-        </div>
-        <div className="flex justify-between items-center">
-          <span className="text-sm pixel-text">Players</span>
-          <span className="font-minecraft text-tertiary">
-            {status?.players.online}
-            <span className="text-gray-500"> / </span>
-            <span className="text-gray-300">{status?.players.max}</span>
-          </span>
-        </div>
-        <div className="flex justify-between items-center">
-          <span className="text-sm pixel-text">Version</span>
-          <span className="font-minecraft text-secondary">{status?.version}</span>
-        </div>
-
-        {/* Custom Progress Bar */}
-        <div className="relative w-full h-5 rounded-full overflow-hidden bg-gray-800 border border-gray-600 mt-2">
-          <div
-            className="absolute inset-0 bg-[url('/textures/striped-bar.png')] bg-repeat opacity-20 animate-bar-slide"
-            style={{
-              backgroundSize: '20px 20px',
-            }}
-          />
+      <div className="panel-content text-sm">
+        {status?.online ? (
           <motion.div
-            className="h-full bg-tertiary rounded-full"
-            style={{ width: `${(status.players.online / status.players.max) * 100}%` }}
-            initial={{ width: 0 }}
-            animate={{ width: `${(status.players.online / status.players.max) * 100}%` }}
-            transition={{ duration: 1, ease: 'easeOut' }}
-          />
-        </div>
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+          >
+            <div className="grid grid-cols-2 gap-2 mb-2">
+              <div className="pixel-text">Server IP</div>
+              <div className="text-right font-minecraft text-white break-words">
+                mc.buildtopiasmp.fun
+              </div>
+            </div>
+            <div className="grid grid-cols-2 gap-2 mb-2">
+              <div className="pixel-text">Players</div>
+              <div className="text-right font-minecraft">
+                <span className="text-tertiary">{status!.players.online}</span>
+                <span className="text-gray-500">/</span>
+                <span className="text-gray-300">{status!.players.max}</span>
+              </div>
+            </div>
+            <div className="grid grid-cols-2 gap-2">
+              <div className="pixel-text">Version</div>
+              <div className="text-right font-minecraft text-secondary">
+                {status!.version}
+              </div>
+            </div>
+
+            <div className="relative w-full rounded-lg h-4 mt-3 overflow-hidden border border-gray-700 bg-gray-900">
+              <div
+                className="absolute inset-0 opacity-20 animate-bar-slide"
+                style={{
+                  backgroundImage: "url('/textures/striped-bar.png')",
+                  backgroundRepeat: 'repeat',
+                  backgroundSize: '30px 30px',
+                }}
+              ></div>
+              <motion.div
+                className="relative bg-tertiary h-4 rounded-lg"
+                style={{
+                  width: `${(status!.players.online / status!.players.max) * 100}%`,
+                }}
+                initial={{ width: 0 }}
+                animate={{
+                  width: `${(status!.players.online / status!.players.max) * 100}%`,
+                }}
+                transition={{ duration: 1, ease: 'easeOut' }}
+              />
+            </div>
+          </motion.div>
+        ) : (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="py-6 text-center"
+          >
+            <div className="pixel-text text-red-400 mb-2">Server Offline</div>
+            <p className="text-sm text-gray-400">
+              The server appears to be down or unreachable. Please check later or contact an administrator.
+            </p>
+          </motion.div>
+        )}
       </div>
 
-      {/* Footer */}
       {lastUpdated && (
-        <div className="mt-4 text-xs text-gray-400 text-right flex justify-end items-center gap-2">
+        <div className="panel-footer text-xs text-gray-500 text-right mt-2">
           Last updated: {lastUpdated.toLocaleTimeString()}
           <button
             onClick={fetchServerStatus}
-            className="ml-2 text-primary hover:text-primary/70 transition-colors minecraft-btn-small rounded-md border border-primary px-2 py-0.5"
+            className="ml-2 text-primary hover:text-primary/70 transition-colors minecraft-btn-small rounded-lg"
             disabled={loading}
           >
-            {loading ? <div className="mc-loader-tiny inline-block" /> : 'Refresh'}
+            {loading ? <div className="mc-loader-tiny inline-block"></div> : 'Refresh'}
           </button>
         </div>
       )}
