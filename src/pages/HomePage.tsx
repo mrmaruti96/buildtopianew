@@ -148,12 +148,12 @@ export default function HomePage() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
                 <div className="fancy-border bg-opacity-50">
                   <h4 className="text-sm text-gray-400 mb-1">Java Edition</h4>
-                  <div className="font-mono select-all cursor-pointer" onClick={() => navigator.clipboard.writeText('play.buildtopiasmp.fun')}>play.buildtopiasmp.fun</div>
+                  <div className="font-mono select-all cursor-pointer" onClick={() => navigator.clipboard.writeText('mc.buildtopiasmp.fun')}>mc.buildtopiasmp.fun</div>
                 </div>
                 <div className="fancy-border bg-opacity-50">
                   <h4 className="text-sm text-gray-400 mb-1">Bedrock Edition</h4>
-                  <div className="font-mono">IP: play.buildtopiasmp.fun</div>
-                  <div className="font-mono">Port: 6004</div>
+                  <div className="font-mono">IP: mcpe.buildtopiasmp.fun</div>
+                  <div className="font-mono">Port: 25569</div>
                 </div>
               </div>
             </div>
