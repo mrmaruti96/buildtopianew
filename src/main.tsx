@@ -10,9 +10,9 @@ import CreditsPage from './pages/CreditsPage'
 import CratesPage from './pages/CratesPage'
 import './index.css'
 
-// Inject Vercel Speed Insights (only in production)
+// ✅ Correctly import and run Vercel Speed Insights in production
 if (import.meta.env.PROD) {
-  import('@vercel/speed-insights').then(({ inject }) => inject())
+  import('@vercel/speed-insights').then((init) => init())
 }
 
 createRoot(document.getElementById('root')!).render(
