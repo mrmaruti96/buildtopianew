@@ -16,10 +16,10 @@ export const teamMembers: TeamMember[] = [
     avatar: 'https://mc-heads.net/avatar/ymyka/50'
   },
   {
-    id: 'dev1',
-    name: 'ParthOP69',
-    role: 'Developer',
-    bio: 'The genius behind Minecraft innovations and the creator of the powerful Titanium Security plugin. A true mastermind shaping the tech behind BUILDTOPIA.Link: https://titanium.skyrain.cloud',
-    avatar: 'https://mc-heads.net/avatar/ItzAkhilesh/50'
-  }
+  id: 'dev1',
+  name: 'ParthOP69',
+  role: 'Developer',
+  bio: 'The genius behind Minecraft innovations and the creator of the powerful Titanium Security plugin. A true mastermind shaping the tech behind BUILDTOPIA. <a href="https://titanium.skyrain.cloud" target="_blank" rel="noopener noreferrer" class="text-blue-400 underline">Link</a>',
+  avatar: 'https://mc-heads.net/avatar/ItzAkhilesh/50'
+}
 ];
