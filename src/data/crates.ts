@@ -58,4 +58,19 @@ export const crates: Crate[] = [
     ],
     description: 'The ultimate crate containing the most valuable and rare items in the server.'
   }
+  {
+    id: 'battlepass',
+    name: 'BattlePass Premihm',
+    price: 399,
+    color: '#FFD700', // Gold
+    image: 'https://images.unsplash.com/photo-1594125674956-61a9b49c8ecc?q=80&w=1374&auto=format&fit=crop',
+    rewards: [
+      'Diamond Armor Set (30% chance)',
+      'Enchanted Netherite Tool (15% chance)',
+      'Rare Cosmetic Items (25% chance)',
+      'Server Currency Booster (20% chance)',
+      'Exclusive Legendary Pet (10% chance)'
+    ],
+    description: 'The ultimate crate containing the most valuable and rare items in the server.'
+  }
 ];
