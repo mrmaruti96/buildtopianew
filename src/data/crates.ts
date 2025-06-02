@@ -60,8 +60,8 @@ export const crates: Crate[] = [
   },
   {
     id: 'battlepass',
-    name: 'BattlePass Premihm',
-    price: 399,
+    name: 'BattlePass Premium',
+    price: 399/month,
     color: '#FFD700', // Gold
     image: 'https://images.unsplash.com/photo-1594125674956-61a9b49c8ecc?q=80&w=1374&auto=format&fit=crop',
     rewards: [
