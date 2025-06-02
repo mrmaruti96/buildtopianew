@@ -57,7 +57,7 @@ export const crates: Crate[] = [
       'Exclusive Legendary Pet (10% chance)'
     ],
     description: 'The ultimate crate containing the most valuable and rare items in the server.'
-  }
+  },
   {
     id: 'battlepass',
     name: 'BattlePass Premihm',
