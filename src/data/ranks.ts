@@ -2,8 +2,8 @@ import { Rank } from '../types';
 
 export const ranks: Rank[] = [
   {
-    id: 'noob',
-    name: 'NOOB',
+    id: 'elite',
+    name: 'ELITE',
     price: 50,
     color: '#AAAAAA',
     perks: [
@@ -19,8 +19,8 @@ export const ranks: Rank[] = [
     ]
   },
   {
-    id: 'pro',
-    name: 'PRO',
+    id: 'HERO',
+    name: 'HERO',
     price: 100,
     color: '#FF55FF',
     perks: [
@@ -36,8 +36,8 @@ export const ranks: Rank[] = [
     ]
   },
   {
-    id: 'elite',
-    name: 'ELITE',
+    id: 'legend',
+    name: 'LEGEND',
     price: 200,
     color: '#55FFFF',
     perks: [
@@ -54,8 +54,8 @@ export const ranks: Rank[] = [
     ]
   },
   {
-    id: 'og',
-    name: 'OG',
+    id: 'vip',
+    name: 'VIP',
     price: 250,
     color: '#FFAA00',
     perks: [
@@ -73,8 +73,8 @@ export const ranks: Rank[] = [
     ]
   },
   {
-    id: 'vip',
-    name: 'VIP',
+    id: 'vipplus',
+    name: 'VIP+',
     price: 300,
     color: '#55FF55',
     perks: [
@@ -95,8 +95,8 @@ export const ranks: Rank[] = [
     ]
   },
   {
-    id: 'vipplus',
-    name: 'VIP+',
+    id: 'ultravip',
+    name: 'ULTRA VIP',
     price: 400,
     color: '#00FF00',
     perks: [
