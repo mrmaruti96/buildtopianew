@@ -104,7 +104,6 @@ export const crates: Crate[] = [
     color: '#FFA500',
     image: 'https://images.unsplash.com/photo-1594125674956-61a9b49c8ecc?q=80&w=1374&auto=format&fit=crop',
     rewards: [
-      '🛡️ Maxed Out Custom Enchanted Netherite Armor and Tools',
       '🪓 Many Crate Keys',
       '🧿 In game items including Netherite'
     ],
