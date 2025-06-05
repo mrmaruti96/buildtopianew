@@ -101,21 +101,12 @@ export const crates: Crate[] = [
     id: 'battlepass',
     name: '💎 BattlePass Premium Monthly',
     price: 399,
-    color: '#FFD700',
+    color: '#FFA500',
     image: 'https://images.unsplash.com/photo-1594125674956-61a9b49c8ecc?q=80&w=1374&auto=format&fit=crop',
     rewards: [
       '🛡️ Maxed Out Custom Enchanted Netherite Armor and Tools',
-      '🪓 Maxed Out Mace',
-      '🧿 16x Ender Pearls',
-      '💨 192x Wind Charges',
-      '🍏 20x Enchanted Golden Apples',
-      '🍎 128x Golden Apples',
-      '🥕 128x Golden Carrot',
-      '🪵 10x Netherite Ingots',
-      '👨‍🌾 4x Villager Spawn Eggs',
-      '🗝️ 4x Mythic Keys',
-      '🗝️ 8x Common Keys',
-      '🗝️ 16x Vote Keys'
+      '🪓 Many Crate Keys',
+      '🧿 In game items including Netherite'
     ],
     description: '💎 A premium monthly reward crate for BattlePass users — packed with top-tier loot!'
   }
