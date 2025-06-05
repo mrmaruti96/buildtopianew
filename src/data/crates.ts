@@ -31,7 +31,7 @@ export const crates: Crate[] = [
     id: 'common',
     name: '📦 Common Crate',
     price: 150,
-    color: '#00AAFF',
+    color: '#FFD700',
     image: 'https://iili.io/FdrZmF9.md.png?q=80&w=1470&auto=format&fit=crop',
     rewards: [
       '🛡️ Enchanted Iron Armor Set',
@@ -54,9 +54,9 @@ export const crates: Crate[] = [
   },
   {
     id: 'mythic',
-    name: '🟣 Mythic Crate',
+    name: '🔵 Mythic Crate',
     price: 300,
-    color: '#AA00FF',
+    color: '#0000FF',
     image: 'https://iili.io/FdrZsj4.md.png?q=80&w=1374&auto=format&fit=crop',
     rewards: [
       '🛡️ Maxed Out Custom Enchanted Armor and Tools',
@@ -79,7 +79,7 @@ export const crates: Crate[] = [
     id: 'maruti',
     name: '🏆 Maruti Crate',
     price: 500,
-    color: '#FFD700',
+    color: '#AA00FF',
     image: 'https://iili.io/FdrZiuf.md.png?q=80&w=1374&auto=format&fit=crop',
     rewards: [
       '🛡️ Maxed Out Custom Enchanted Netherite Armor and Tools',
