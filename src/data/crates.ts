@@ -57,7 +57,7 @@ export const crates: Crate[] = [
     name: '🟣 Mythic Crate',
     price: 300,
     color: '#AA00FF',
-    image: 'https://images.unsplash.com/photo-1611457194403-d3aca4cf9d11?q=80&w=1374&auto=format&fit=crop',
+    image: 'https://iili.io/FdrZiuf.md.png?q=80&w=1374&auto=format&fit=crop',
     rewards: [
       '🛡️ Maxed Out Custom Enchanted Armor and Tools',
       '🔱 Custom Trident',
