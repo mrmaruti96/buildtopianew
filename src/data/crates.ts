@@ -56,7 +56,7 @@ export const crates: Crate[] = [
     id: 'mythic',
     name: '🔵 Mythic Crate',
     price: 300,
-    color: '#0000FF',
+    color: '#00FEFC',
     image: 'https://iili.io/FdrZsj4.md.png?q=80&w=1374&auto=format&fit=crop',
     rewards: [
       '🛡️ Maxed Out Custom Enchanted Armor and Tools',
