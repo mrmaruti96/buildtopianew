@@ -3,7 +3,7 @@ import { Crate } from '../types';
 export const crates: Crate[] = [
   {
     id: 'vote',
-    name: '🎁 Vote Crate',
+    name: 'Vote Crate',
     price: 0,
     color: '#55FF55',
     image: 'https://iili.io/FdrZD67.md.png?q=80&w=1470&auto=format&fit=crop',
@@ -29,7 +29,7 @@ export const crates: Crate[] = [
   },
   {
     id: 'common',
-    name: '📦 Common Crate',
+    name: 'Common Crate',
     price: 150,
     color: '#FFD700',
     image: 'https://iili.io/FdrZmF9.md.png?q=80&w=1470&auto=format&fit=crop',
@@ -54,7 +54,7 @@ export const crates: Crate[] = [
   },
   {
     id: 'mythic',
-    name: '🔵 Mythic Crate',
+    name: 'Mythic Crate',
     price: 300,
     color: '#00FEFC',
     image: 'https://iili.io/FdrZsj4.md.png?q=80&w=1374&auto=format&fit=crop',
@@ -77,7 +77,7 @@ export const crates: Crate[] = [
   },
   {
     id: 'maruti',
-    name: '🏆 Maruti Crate',
+    name: 'Maruti Crate',
     price: 500,
     color: '#AA00FF',
     image: 'https://iili.io/FdrZiuf.md.png?q=80&w=1374&auto=format&fit=crop',
@@ -99,7 +99,7 @@ export const crates: Crate[] = [
   },
   {
     id: 'battlepass',
-    name: '💎 BattlePass Premium Monthly',
+    name: 'BattlePass Premium Monthly',
     price: 399,
     color: '#FFA500',
     image: 'https://iili.io/Fd4g7AN.md.png?q=80&w=1374&auto=format&fit=crop',
