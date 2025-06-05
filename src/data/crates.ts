@@ -6,7 +6,7 @@ export const crates: Crate[] = [
     name: '🎁 Vote Crate',
     price: 0,
     color: '#55FF55',
-    image: 'https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?q=80&w=1470&auto=format&fit=crop',
+    image: 'https://iili.io/FdrZD67.md.png?q=80&w=1470&auto=format&fit=crop',
     rewards: [
       '🛡️ Enchanted Iron Armor Set',
       '⚒️ Enchanted Iron Tools',
@@ -32,7 +32,7 @@ export const crates: Crate[] = [
     name: '📦 Common Crate',
     price: 150,
     color: '#00AAFF',
-    image: 'https://images.unsplash.com/photo-1627843240167-b1f9d70d978a?q=80&w=1470&auto=format&fit=crop',
+    image: 'https://iili.io/FdrZmF9.md.png?q=80&w=1470&auto=format&fit=crop',
     rewards: [
       '🛡️ Enchanted Iron Armor Set',
       '⚒️ Enchanted Iron Tools',
@@ -57,7 +57,7 @@ export const crates: Crate[] = [
     name: '🟣 Mythic Crate',
     price: 300,
     color: '#AA00FF',
-    image: 'https://iili.io/FdrZiuf.md.png?q=80&w=1374&auto=format&fit=crop',
+    image: 'https://iili.io/FdrZsj4.md.png?q=80&w=1374&auto=format&fit=crop',
     rewards: [
       '🛡️ Maxed Out Custom Enchanted Armor and Tools',
       '🔱 Custom Trident',
@@ -80,7 +80,7 @@ export const crates: Crate[] = [
     name: '🏆 Maruti Crate',
     price: 500,
     color: '#FFD700',
-    image: 'https://images.unsplash.com/photo-1594125674956-61a9b49c8ecc?q=80&w=1374&auto=format&fit=crop',
+    image: 'https://iili.io/FdrZiuf.md.png?q=80&w=1374&auto=format&fit=crop',
     rewards: [
       '🛡️ Maxed Out Custom Enchanted Netherite Armor and Tools',
       '🪓 Maxed Out Mace',
