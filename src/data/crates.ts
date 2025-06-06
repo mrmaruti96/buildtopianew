@@ -2,35 +2,9 @@ import { Crate } from '../types';
 
 export const crates: Crate[] = [
   {
-    id: 'vote',
-    name: 'Vote Crate',
-    price: 0,
-    color: '#55FF55',
-    image: 'https://iili.io/FdrZD67.md.png?q=80&w=1470&auto=format&fit=crop',
-    rewards: [
-      '🛡️ Enchanted Iron Armor Set',
-      '⚒️ Enchanted Iron Tools',
-      '🧿 16x Ender Pearls',
-      '🌾 32x SugarCanes',
-      '🍖 32x Steak',
-      '🍞 32x Bread',
-      '🌱 32x Wheat Seeds',
-      '🟠 16x Copper Blocks',
-      '💎 2x Diamond Blocks',
-      '🪨 8x Iron Blocks',
-      '🗝️ 1x Common Crate Key',
-      '👨‍🌾 1x Villager Spawn Egg',
-      '🥧 64x Pumpkin Pie',
-      '🥕 64x Golden Carrot',
-      '⛓️ 32x Iron Ingots',
-      '🎒 1x Bundle'
-    ],
-    description: 'A free crate 🎁 with useful starter items and rare surprises!'
-  },
-  {
     id: 'common',
     name: 'Common Crate',
-    price: 150,
+    price: 149,
     color: '#FFD700',
     image: 'https://iili.io/FdrZmF9.md.png?q=80&w=1470&auto=format&fit=crop',
     rewards: [
@@ -55,7 +29,7 @@ export const crates: Crate[] = [
   {
     id: 'mythic',
     name: 'Mythic Crate',
-    price: 300,
+    price: 299,
     color: '#00FEFC',
     image: 'https://iili.io/FdrZsj4.md.png?q=80&w=1374&auto=format&fit=crop',
     rewards: [
@@ -78,7 +52,7 @@ export const crates: Crate[] = [
   {
     id: 'maruti',
     name: 'Maruti Crate',
-    price: 500,
+    price: 399,
     color: '#AA00FF',
     image: 'https://iili.io/FdrZiuf.md.png?q=80&w=1374&auto=format&fit=crop',
     rewards: [
