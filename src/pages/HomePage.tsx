@@ -14,6 +14,9 @@ export default function HomePage() {
     'https://i.ibb.co/4Z6Nttvq/2025-05-10-20-18-12.png?q=80&w=1471&auto=format&fit=crop',
     'https://i.ibb.co/6SwLbTB/2025-05-10-20-28-50.png?q=80&w=1470&auto=format&fit=crop',
     'https://i.ibb.co/1G5FGTnd/2025-01-19-16-35-28.png?q=80&w=1470&auto=format&fit=crop',
+    'https://i.ibb.co/JWhCrQ43/2025-05-22-22-27-54.png?q=80&w=1470&auto=format&fit=crop',
+    'https://i.ibb.co/6cFQKd2J/image.png?q=80&w=1470&auto=format&fit=crop',
+    'https://i.ibb.co/4w9pfK36/2025-06-02-11-32-53.png?q=80&w=1470&auto=format&fit=crop',
   ];
 
   const fadeInUpVariants = {
