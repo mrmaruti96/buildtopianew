@@ -20,23 +20,22 @@ export default function ServerStatus() {
 
       const data = await response.json();
 
-      if (!data.online) {
+      if (data.online === true) {
+        const serverStatus: ServerStatusType = {
+          online: true,
+          players: {
+            online: data.players?.online ?? 0,
+            max: data.players?.max ?? 100,
+          },
+          version: data.version ?? 'Unknown',
+        };
+
+        setStatus(serverStatus);
+        setError(null);
+      } else {
         setStatus({ online: false, players: { online: 0, max: 0 }, version: 'Unknown' });
         setError(null);
-        return;
       }
-
-      const serverStatus: ServerStatusType = {
-        online: true,
-        players: {
-          online: data.players?.online ?? 0,
-          max: data.players?.max ?? 100,
-        },
-        version: data.version ?? 'Unknown',
-      };
-
-      setStatus(serverStatus);
-      setError(null);
     } catch (err) {
       console.error('Server status fetch error:', err);
       setStatus({ online: false, players: { online: 0, max: 0 }, version: 'Unknown' });
@@ -63,11 +62,6 @@ export default function ServerStatus() {
       </div>
     );
   }
-
-  const onlinePercent =
-    status?.players.max && status.players.max > 0
-      ? (status.players.online / status.players.max) * 100
-      : 0;
 
   return (
     <motion.div
@@ -109,7 +103,7 @@ export default function ServerStatus() {
             <div className="grid grid-cols-2 gap-2 mb-2">
               <div className="pixel-text">Server IP</div>
               <div className="text-right font-minecraft text-white break-words">
-                mc.buildtopiasmp.fun
+                pancake.xyle.host:6004
               </div>
             </div>
             <div className="grid grid-cols-2 gap-2 mb-2">
@@ -139,11 +133,11 @@ export default function ServerStatus() {
               <motion.div
                 className="relative bg-tertiary h-4 rounded-lg"
                 style={{
-                  width: `${onlinePercent}%`,
+                  width: `${(status.players.online / status.players.max) * 100}%`,
                 }}
                 initial={{ width: 0 }}
                 animate={{
-                  width: `${onlinePercent}%`,
+                  width: `${(status.players.online / status.players.max) * 100}%`,
                 }}
                 transition={{ duration: 1, ease: 'easeOut' }}
               />
