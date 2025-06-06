@@ -20,6 +20,12 @@ export default function ServerStatus() {
 
       const data = await response.json();
 
+      if (!data.online) {
+        setStatus({ online: false, players: { online: 0, max: 0 }, version: 'Unknown' });
+        setError(null);
+        return;
+      }
+
       const serverStatus: ServerStatusType = {
         online: true,
         players: {
@@ -33,13 +39,8 @@ export default function ServerStatus() {
       setError(null);
     } catch (err) {
       console.error('Server status fetch error:', err);
-      setError('Failed to fetch server status details. The server is online.');
-
-      setStatus({
-        online: true,
-        players: { online: 0, max: 100 },
-        version: 'Unknown',
-      });
+      setStatus({ online: false, players: { online: 0, max: 0 }, version: 'Unknown' });
+      setError('Failed to fetch server status.');
     } finally {
       setLastUpdated(new Date());
       setLoading(false);
@@ -62,6 +63,11 @@ export default function ServerStatus() {
       </div>
     );
   }
+
+  const onlinePercent =
+    status?.players.max && status.players.max > 0
+      ? (status.players.online / status.players.max) * 100
+      : 0;
 
   return (
     <motion.div
@@ -109,15 +115,15 @@ export default function ServerStatus() {
             <div className="grid grid-cols-2 gap-2 mb-2">
               <div className="pixel-text">Players</div>
               <div className="text-right font-minecraft">
-                <span className="text-tertiary">{status!.players.online}</span>
+                <span className="text-tertiary">{status.players.online}</span>
                 <span className="text-gray-500">/</span>
-                <span className="text-gray-300">{status!.players.max}</span>
+                <span className="text-gray-300">{status.players.max}</span>
               </div>
             </div>
             <div className="grid grid-cols-2 gap-2">
               <div className="pixel-text">Version</div>
               <div className="text-right font-minecraft text-secondary">
-                {status!.version}
+                {status.version}
               </div>
             </div>
 
@@ -133,11 +139,11 @@ export default function ServerStatus() {
               <motion.div
                 className="relative bg-tertiary h-4 rounded-lg"
                 style={{
-                  width: `${(status!.players.online / status!.players.max) * 100}%`,
+                  width: `${onlinePercent}%`,
                 }}
                 initial={{ width: 0 }}
                 animate={{
-                  width: `${(status!.players.online / status!.players.max) * 100}%`,
+                  width: `${onlinePercent}%`,
                 }}
                 transition={{ duration: 1, ease: 'easeOut' }}
               />
