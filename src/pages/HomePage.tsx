@@ -167,7 +167,7 @@ export default function HomePage() {
             <h4 className="text-sm text-gray-400 mb-1">Bedrock Edition</h4>
             <div className="font-mono text-white">
               <div className="bg-black/70 px-3 py-1 rounded mb-1">
-                IP: <span className="text-green-400">mcpe.buildtopiasmp.fun</span>
+                IP: <span className="text-green-400">mc.buildtopiasmp.fun</span>
               </div>
               <div className="bg-black/70 px-3 py-1 rounded">
                 Port: <span className="text-yellow-400">25569</span>
