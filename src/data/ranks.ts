@@ -8,7 +8,7 @@ export const ranks: Rank[] = [
     color: '#AAAAAA',
     perks: [
       '💰 ₹20K in-game money',
-      '🏷️ NOOB tag',
+      '🏷️ ELITE tag',
       '🗓️ ₹5K per week',
       '🏠 2 home sets',
       '🧱 500 claim blocks',
@@ -26,7 +26,7 @@ export const ranks: Rank[] = [
     perks: [
       '💰 ₹30K in-game money',
       '🗓️ ₹10K per week',
-      '🏷️ PRO tag',
+      '🏷️ HERO tag',
       '🏠 3 home sets',
       '🧱 500 claim blocks',
       '🗝️ 2 Common Crate Keys',
@@ -42,7 +42,7 @@ export const ranks: Rank[] = [
     color: '#55FFFF',
     perks: [
       '💰 ₹50K in-game money',
-      '🏷️ ELITE tag',
+      '🏷️ LEGEND tag',
       '🗓️ ₹25K per week',
       '🏠 5 home sets',
       '🧱 1000 claim blocks',
@@ -61,7 +61,7 @@ export const ranks: Rank[] = [
     perks: [
       '💰 ₹1 Lakh in-game money',
       '🗓️ ₹50K per week',
-      '🏷️ OG tag',
+      '🏷️ VIP tag',
       '🏠 6 home sets',
       '🧱 2000 claim blocks',
       '⚒️ 2 Netherite Ingots',
@@ -80,7 +80,7 @@ export const ranks: Rank[] = [
     perks: [
       '💰 ₹3 Lakh in-game money',
       '🗓️ ₹1 Lakh per week',
-      '🏷️ VIP tag',
+      '🏷️ VIP+ tag',
       '🧱 3000 claim blocks',
       '🏠 8 home sets',
       '⚒️ 4 Netherite Ingots',
@@ -102,7 +102,7 @@ export const ranks: Rank[] = [
     perks: [
       '💰 ₹5 Lakh in-game money',
       '🗓️ ₹3 Lakh per week',
-      '🏷️ VIP+ tag',
+      '🏷️ ULTRAVIP tag',
       '🏠 10 home sets',
       '🧱 5000 claim blocks',
       '⚒️ 8 Netherite Ingots',
