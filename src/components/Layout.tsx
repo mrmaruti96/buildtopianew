@@ -145,9 +145,9 @@ export default function Layout() {
                 <div className="flex items-center">
                   <div 
                     className="font-minecraft w-full bg-gray-800/70 px-2 py-1 cursor-pointer border-2 border-gray-900 rounded-lg"
-                    onClick={() => handleCopyIP('mc.buildtopiasmp.fun')}
+                    onClick={() => handleCopyIP('play.buildtopiasmp.fun:8004')}
                   >
-                    mc.buildtopiasmp.fun
+                    play.buildtopiasmp.fun:8004
                     {copied && <Check className="inline ml-2 text-green-500 h-4 w-4" />}
                   </div>
                 </div>
@@ -160,17 +160,17 @@ export default function Layout() {
                   <div className="text-sm text-gray-300 pixel-text">IP:</div>
                   <div 
                     className="col-span-2 font-minecraft bg-gray-800/70 px-2 py-1 border-2 border-gray-900 cursor-pointer flex items-center justify-between rounded-lg"
-                    onClick={() => handleCopyIP('mcpe.buildtopiasmp.fun')}
+                    onClick={() => handleCopyIP('play.buildtopiasmp.fun')}
                   >
-                    <span>mcpe.buildtopiasmp.fun</span>
+                    <span>play.buildtopiasmp.fun</span>
                     {copied && <Check className="inline ml-2 text-green-500 h-4 w-4" />}
                   </div>
                   <div className="text-sm text-gray-300 pixel-text">Port:</div>
                   <div 
                     className="col-span-2 font-minecraft bg-gray-800/70 px-2 py-1 border-2 border-gray-900 cursor-pointer flex items-center justify-between"
-                    onClick={() => handleCopyIP('25569')}
+                    onClick={() => handleCopyIP('8004')}
                   >
-                    <span>25569</span>
+                    <span>8004</span>
                     {copied && <Check className="inline ml-2 text-green-500 h-4 w-4" />}
                   </div>
                 </div>
