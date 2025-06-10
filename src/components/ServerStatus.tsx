@@ -12,7 +12,7 @@ export default function ServerStatus() {
   const fetchServerStatus = async () => {
     try {
       setLoading(true);
-      const response = await fetch('https://api.mcsrvstat.us/2/mc.buildtopiasmp.fun');
+      const response = await fetch('https://api.mcsrvstat.us/2/play.buildtopiasmp.fun');
 
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
