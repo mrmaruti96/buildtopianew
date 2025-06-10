@@ -155,10 +155,10 @@ export default function HomePage() {
             <h4 className="text-sm text-gray-400 mb-1">Java Edition</h4>
             <div 
               className="font-mono text-lg text-white bg-black/70 px-3 py-1 rounded select-all cursor-pointer hover:bg-black/90 transition"
-              onClick={() => navigator.clipboard.writeText('mc.buildtopiasmp.fun')}
+              onClick={() => navigator.clipboard.writeText('play.buildtopiasmp.fun:8004')}
               title="Click to copy"
             >
-              mc.buildtopiasmp.fun
+              play.buildtopiasmp.fun:8004
             </div>
           </div>
 
@@ -167,10 +167,10 @@ export default function HomePage() {
             <h4 className="text-sm text-gray-400 mb-1">Bedrock Edition</h4>
             <div className="font-mono text-white">
               <div className="bg-black/70 px-3 py-1 rounded mb-1">
-                IP: <span className="text-green-400">mcpe.buildtopiasmp.fun</span>
+                IP: <span className="text-green-400">play.buildtopiasmp.fun</span>
               </div>
               <div className="bg-black/70 px-3 py-1 rounded">
-                Port: <span className="text-yellow-400">25569</span>
+                Port: <span className="text-yellow-400">8004</span>
               </div>
             </div>
           </div>
