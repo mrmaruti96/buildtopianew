@@ -12,7 +12,7 @@ export default function ServerStatus() {
   const fetchServerStatus = async () => {
     try {
       setLoading(true);
-      const response = await fetch('https://api.mcsrvstat.us/2/play.buildtopiasmp.fun:8004');
+      const response = await fetch('https://api.mcsrvstat.us/2/play.buildtopiasmp.fun');
 
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
@@ -103,7 +103,7 @@ export default function ServerStatus() {
             <div className="grid grid-cols-2 gap-2 mb-2">
               <div className="pixel-text">Server IP</div>
               <div className="text-right font-minecraft text-white break-words">
-                play.buildtopiasmp.fun:8004
+                play.buildtopiasmp.fun
               </div>
             </div>
             <div className="grid grid-cols-2 gap-2 mb-2">
