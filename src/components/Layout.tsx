@@ -147,7 +147,7 @@ export default function Layout() {
                     className="font-minecraft w-full bg-gray-800/70 px-2 py-1 cursor-pointer border-2 border-gray-900 rounded-lg"
                     onClick={() => handleCopyIP('play.buildtopiasmp.fun:8004')}
                   >
-                    play.buildtopiasmp.fun:8004
+                    play.buildtopiasmp.fun
                     {copied && <Check className="inline ml-2 text-green-500 h-4 w-4" />}
                   </div>
                 </div>
@@ -170,7 +170,7 @@ export default function Layout() {
                     className="col-span-2 font-minecraft bg-gray-800/70 px-2 py-1 border-2 border-gray-900 cursor-pointer flex items-center justify-between"
                     onClick={() => handleCopyIP('8004')}
                   >
-                    <span>8004</span>
+                    <span>25565</span>
                     {copied && <Check className="inline ml-2 text-green-500 h-4 w-4" />}
                   </div>
                 </div>
