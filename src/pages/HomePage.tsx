@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { motion, useInView } from 'framer-motion';
+import { motion, useInView, Variants } from 'framer-motion';
 import ReactPlayer from 'react-player/youtube';
 import ServerStatus from '../components/ServerStatus';
 import AnimatedBlock from '../components/AnimatedBlock';
@@ -19,15 +19,16 @@ export default function HomePage() {
     'https://i.ibb.co/4w9pfK36/2025-06-02-11-32-53.png?q=80&w=1470&auto=format&fit=crop',
   ];
 
-  const fadeInUpVariants = {
+  // Type-safe fade-in-up variants
+  const fadeInUpVariants: Variants = {
     hidden: { opacity: 0, y: 30 },
-    visible: (i: number) => ({
+    visible: (custom: number) => ({
       opacity: 1,
       y: 0,
       transition: {
-        delay: i * 0.1,
+        delay: custom * 0.1,
         duration: 0.7,
-        ease: [0.1, 0.4, 0.2, 1],
+        ease: 'easeInOut',
       }
     })
   };
@@ -39,30 +40,30 @@ export default function HomePage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div>
             <motion.h1 
-  className="text-4xl md:text-6xl font-extrabold mb-4 leading-tight text-center"
-  animate={{ 
-    y: [0, -10, 0],
-    textShadow: [
-      "0 0 10px rgba(34, 221, 255, 0.6)",
-      "0 0 20px rgba(34, 221, 255, 1)",
-      "0 0 10px rgba(34, 221, 255, 0.6)"
-    ]
-  }}
-  transition={{ 
-    y: { repeat: Infinity, duration: 3, ease: "easeInOut" },
-    textShadow: { repeat: Infinity, duration: 3, ease: "easeInOut" }
-  }}
-  whileHover={{ scale: 1.05 }}
->
-  <span className="block text-white">
-    Welcome to
-  </span>
-  <span 
-    className="block bg-gradient-to-r from-cyan-400 via-sky-500 to-blue-600 bg-clip-text text-transparent"
-  >
-    Buildtopia SMP
-  </span>
-</motion.h1>
+              className="text-4xl md:text-6xl font-extrabold mb-4 leading-tight text-center"
+              animate={{ 
+                y: [0, -10, 0],
+                textShadow: [
+                  "0 0 10px rgba(34, 221, 255, 0.6)",
+                  "0 0 20px rgba(34, 221, 255, 1)",
+                  "0 0 10px rgba(34, 221, 255, 0.6)"
+                ]
+              }}
+              transition={{ 
+                y: { repeat: Infinity, duration: 3, ease: "easeInOut" },
+                textShadow: { repeat: Infinity, duration: 3, ease: "easeInOut" }
+              }}
+              whileHover={{ scale: 1.05 }}
+            >
+              <span className="block text-white">
+                Welcome to
+              </span>
+              <span 
+                className="block bg-gradient-to-r from-cyan-400 via-sky-500 to-blue-600 bg-clip-text text-transparent"
+              >
+                Buildtopia SMP
+              </span>
+            </motion.h1>
 
             <motion.p 
               className="text-lg mb-6 text-gray-300"
@@ -101,27 +102,27 @@ export default function HomePage() {
             transition={{ duration: 0.7, delay: 0.2 }}
           >
             <motion.img 
-  src="https://mocha-cdn.com/0196e190-5e08-7ba2-99d5-e2009a9a3170/Untitled-1.png" 
-  alt="Buildtopia SMP Logo" 
-  className="h-auto max-w-full mx-auto mb-6"
-  style={{ 
-    maxHeight: "300px", // increased from 220px
-    filter: "drop-shadow(0 0 15px rgba(34, 221, 255, 0.8))" // brighter base glow
-  }}
-  animate={{ 
-    y: [0, -10, 0],
-    filter: [
-      "drop-shadow(0 0 10px rgba(34, 221, 255, 0.6))", 
-      "drop-shadow(0 0 20px rgba(34, 221, 255, 1))", 
-      "drop-shadow(0 0 10px rgba(34, 221, 255, 0.6))"
-    ]
-  }}
-  transition={{ 
-    y: { repeat: Infinity, duration: 3, ease: "easeInOut" },
-    filter: { repeat: Infinity, duration: 3, ease: "easeInOut" }
-  }}
-  whileHover={{ scale: 1.08 }} // slightly more scale on hover
-/>
+              src="https://mocha-cdn.com/0196e190-5e08-7ba2-99d5-e2009a9a3170/Untitled-1.png" 
+              alt="Buildtopia SMP Logo" 
+              className="h-auto max-w-full mx-auto mb-6"
+              style={{ 
+                maxHeight: "300px",
+                filter: "drop-shadow(0 0 15px rgba(34, 221, 255, 0.8))"
+              }}
+              animate={{ 
+                y: [0, -10, 0],
+                filter: [
+                  "drop-shadow(0 0 10px rgba(34, 221, 255, 0.6))", 
+                  "drop-shadow(0 0 20px rgba(34, 221, 255, 1))", 
+                  "drop-shadow(0 0 10px rgba(34, 221, 255, 0.6))"
+                ]
+              }}
+              transition={{ 
+                y: { repeat: Infinity, duration: 3, ease: "easeInOut" },
+                filter: { repeat: Infinity, duration: 3, ease: "easeInOut" }
+              }}
+              whileHover={{ scale: 1.08 }}
+            />
             <div className="mt-4 max-w-md mx-auto">
               <ServerStatus />
             </div>
@@ -130,60 +131,53 @@ export default function HomePage() {
       </section>
 
       {/* Server information */}
-<AnimatedBlock delay={0.3}>
-  <section className="mb-16">
-    <h2 className="section-title">Server Information</h2>
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-      
-      {/* How to Join */}
-      <div className="md:col-span-2 fancy-border p-6">
-        <h3 className="text-xl font-bold mb-4 gradient-text">How to Join</h3>
-        <p className="mb-4">
-          Getting started is easy! Follow these steps to join our server:
-        </p>
-        <ol className="list-decimal pl-5 space-y-2 mb-6">
-          <li>Launch <strong>Minecraft Java Edition</strong> or <strong>Bedrock Edition</strong></li>
-          <li>Navigate to <strong>Multiplayer → Add Server</strong></li>
-          <li>Enter the server address provided below</li>
-          <li>Connect and start your adventure!</li>
-        </ol>
+      <AnimatedBlock delay={0.3}>
+        <section className="mb-16">
+          <h2 className="section-title">Server Information</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="md:col-span-2 fancy-border p-6">
+              <h3 className="text-xl font-bold mb-4 gradient-text">How to Join</h3>
+              <p className="mb-4">
+                Getting started is easy! Follow these steps to join our server:
+              </p>
+              <ol className="list-decimal pl-5 space-y-2 mb-6">
+                <li>Launch <strong>Minecraft Java Edition</strong> or <strong>Bedrock Edition</strong></li>
+                <li>Navigate to <strong>Multiplayer → Add Server</strong></li>
+                <li>Enter the server address provided below</li>
+                <li>Connect and start your adventure!</li>
+              </ol>
 
-        {/* IP Addresses */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {/* Java Edition */}
-          <div className="fancy-border p-4 bg-opacity-50">
-            <h4 className="text-sm text-gray-400 mb-1">Java Edition</h4>
-            <div 
-              className="font-mono text-lg text-white bg-black/70 px-3 py-1 rounded select-all cursor-pointer hover:bg-black/90 transition"
-              onClick={() => navigator.clipboard.writeText('play.buildtopiasmp.fun')}
-              title="Click to copy"
-            >
-              play.buildtopiasmp.fun
-            </div>
-          </div>
-
-          {/* Bedrock Edition */}
-          <div className="fancy-border p-4 bg-opacity-50">
-            <h4 className="text-sm text-gray-400 mb-1">Bedrock Edition</h4>
-            <div className="font-mono text-white">
-              <div className="bg-black/70 px-3 py-1 rounded mb-1">
-                IP: <span className="text-green-400">play.buildtopiasmp.fun</span>
-              </div>
-              <div className="bg-black/70 px-3 py-1 rounded">
-                Port: <span className="text-yellow-400">25597</span>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="fancy-border p-4 bg-opacity-50">
+                  <h4 className="text-sm text-gray-400 mb-1">Java Edition</h4>
+                  <div 
+                    className="font-mono text-lg text-white bg-black/70 px-3 py-1 rounded select-all cursor-pointer hover:bg-black/90 transition"
+                    onClick={() => navigator.clipboard.writeText('play.buildtopiasmp.fun')}
+                    title="Click to copy"
+                  >
+                    play.buildtopiasmp.fun
+                  </div>
+                </div>
+                <div className="fancy-border p-4 bg-opacity-50">
+                  <h4 className="text-sm text-gray-400 mb-1">Bedrock Edition</h4>
+                  <div className="font-mono text-white">
+                    <div className="bg-black/70 px-3 py-1 rounded mb-1">
+                      IP: <span className="text-green-400">play.buildtopiasmp.fun</span>
+                    </div>
+                    <div className="bg-black/70 px-3 py-1 rounded">
+                      Port: <span className="text-yellow-400">25597</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
 
-      {/* Server Status */}
-      <div>
-        <ServerStatus />
-      </div>
-    </div>
-  </section>
-</AnimatedBlock>
+            <div>
+              <ServerStatus />
+            </div>
+          </div>
+        </section>
+      </AnimatedBlock>
 
       {/* Gallery */}
       <AnimatedBlock delay={0.4}>
