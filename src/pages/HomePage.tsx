@@ -170,7 +170,7 @@ export default function HomePage() {
                 IP: <span className="text-green-400">play.buildtopiasmp.fun</span>
               </div>
               <div className="bg-black/70 px-3 py-1 rounded">
-                Port: <span className="text-yellow-400">25565</span>
+                Port: <span className="text-yellow-400">25597</span>
               </div>
             </div>
           </div>
