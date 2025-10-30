@@ -168,9 +168,9 @@ export default function Layout() {
                   <div className="text-sm text-gray-300 pixel-text">Port:</div>
                   <div 
                     className="col-span-2 font-minecraft bg-gray-800/70 px-2 py-1 border-2 border-gray-900 cursor-pointer flex items-center justify-between"
-                    onClick={() => handleCopyIP('25597')}
+                    onClick={() => handleCopyIP('19180')}
                   >
-                    <span>25597</span>
+                    <span>19180</span>
                     {copied && <Check className="inline ml-2 text-green-500 h-4 w-4" />}
                   </div>
                 </div>
